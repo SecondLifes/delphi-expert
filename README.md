@@ -1,0 +1,501 @@
+# 🚀 Delphi AI Spec-Kit
+
+<div align="center">
+
+**An opinionated ecosystem of rules, *skills* and *steerings* to elevate Delphi development to state-of-the-art with Artificial Intelligence.**
+
+[![🇹🇷 Türkçe ](https://img.shields.io/badge/Turkish-Türkiye-red)](README.tr-TR.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Delphi](https://img.shields.io/badge/Delphi-Object%20Pascal-red?logo=delphi)](https://www.embarcadero.com/products/delphi)
+[![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-Ready-blue?logo=github)](https://github.com/features/copilot)
+[![Cursor](https://img.shields.io/badge/Cursor-Rules-purple)](https://cursor.sh)
+[![Claude](https://img.shields.io/badge/Claude-Code-brown?logo=anthropic)](https://claude.ai)
+[![Gemini](https://img.shields.io/badge/Gemini-Skills-orange?logo=google)](https://gemini.google.com)
+[![Kiro](https://img.shields.io/badge/Kiro-Steering-teal)](https://kiro.dev)
+
+*[🇹🇷 Türkçe](README.tr-TR.md) · [Contributing](CONTRIBUTING.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [Security](SECURITY.md) · [Acknowledgments](ACKNOWLEDGMENTS.md)*
+
+<!-- ![Overview](docs/images/overview.png) -->
+<!-- Generate this image using the "Image 1 — Overview" prompt in Prompts/image-prompts.md, save it to docs/images/overview.png, then uncomment the line above. -->
+
+</div>
+
+## Sponsorship
+
+**Delphi/Lazarus components**
+<www.inovefast.com.br>
+
+Integrations with payment platforms and services (Asaas, MercadoPago, Cielo, PagSeguro, D4sign, Webstore, MelhorEnvio, Groq)
+
+**i9DBTools**
+<www.inovefast.com.br/i9dbTools/>
+Manage MySQL, PostgreSQL, Firebird and SQLite in one place, with AI to generate and explain SQL in natural language, optimize queries and create Brazilian fake data in seconds.
+
+## 📋 Index
+
+- [Turkish-Türkiye](README.tr-TR.md)
+- [What is this project?](#-what-is-this-project)
+- [Why use?](#-why-use)
+- [Supported AI-Tools](#-supported-ai-tools)
+- [Main Guidelines](#-main-guidelines-taught-to-ia)
+- [Supported Frameworks](#️-supported-frameworks-and-libraries)
+- [Kit Structure](#-kit-structure)
+- [Quick Start](#-quick-start)
+- [Code Examples](#-examples-of-good-practices)
+- [Design & Philosophy](#-design--philosophy)
+- [Acknowledgments](#-acknowledgments)
+- [Contributions](#-contributions)
+
+---
+
+## 💡 What is this project?
+
+The **Delphi AI Spec-Kit** is not a code framework — it's a set of **behavior guidelines** for your favorite AI. It "teaches" the wizard to write Delphi code:
+
+- ✅ **Clean** — no *god classes*, no business logic in `OnClick`
+- ✅ **Secure** — zero *memory leaks* with `try..finally` and (ARC) interfaces
+- ✅ **Testable** — TDD with DUnitX, Fakes via interface, without real bench in tests
+- ✅ **Architected** — SOLID, DDD, Repository/Service Pattern and *clean architecture*
+
+> Say goodbye to AI that mixes database access with the presentation layer, forgets `try..finally` or ignores Dependency Injection.
+
+---
+
+## 🤔 Why use it?
+
+| Without Spec-Kit | With the Spec-Kit |
+|---|---|
+| AI generates code with logic in `OnClick` | AI isolates layers correctly |
+| `TStringList.Create` without `try..finally` | Memory gold standard always applied |
+| Tests coupled to the real bank | Fakes via interface, quick and isolated tests |
+| Inconsistent naming | `A`-params, `F`-fields, `T`-types, verbs in methods |
+| `with` statement and global variables | Code smells blocked proactively |
+
+---
+
+## 🤖 Supported AI Tools
+
+| Tool | Configuration File | How It Works |
+|---|---|---|
+| **GitHub Copilot** | `.github/copilot-instructions.md` | Pre-prompt injected into Workspace/Chat |
+| **Cursor** | `.cursor/rules/*.md` (generated) | Rules loaded by context |
+| **Claude Code** | `.claude/` (rules generated, skills shared) | Rules by context and skills in the terminal |
+| **Codex CLI** | `AGENTS.md` | Reads it directly, no dedicated folder needed |
+| **Google Gemini / Antigravity** | `.gemini/rules/project-rules.md` | Summary rules, condensed like `AGENTS.md` |
+| **Kiro AI** | `.kiro/steering/*.md` | Stack and architectural constraints |
+| **Any AI** | `AGENTS.md` | Universal rules (project root) |
+| **All of the above** | `.agents/skills/*/SKILL.md` | Shared skills — Agent Skills open standard, one copy for every tool |
+
+> Rules and commands have a single canonical source at `.agents/rules/` and
+> `.agents/commands/`; `.claude/rules`, `.cursor/rules` and `.claude/commands`
+> are generated from it by `tools/generate-ai-configs.ps1` — see
+> `.agents/rules/sync-workflow.md`.
+
+---
+
+## 🌟 Key Guidelines Taught to AI
+
+<!-- ![Core Features](docs/images/core-features.png) -->
+<!-- Generate this image using the "Image 2 — Core Features" prompt in Prompts/image-prompts.md, save it to docs/images/core-features.png, then uncomment the line above. -->
+
+### 🧠 Memory Management Zero-Leak
+
+The AI ​​enforces the pattern: every `.Create` without *Owner* requires `try..finally` on the **immediately** subsequent line. Also teaches the use of **Interfaces** (ARC reference counting) for automatic lifetime management — without manual `Free`.
+
+```pascal
+//✅ Gold Standard — ALWAYS generated by AI with Spec-Kit
+var LList: TStringList;
+begin
+  LList := TStringList.Create;
+  try
+    LList.Add('item');
+  finally
+    LList.Free;
+  end;
+end;
+```
+
+### 🧪 TDD with DUnitX
+
+*Red-Green-Refactor* flow with Fakes isolated per interface. No coupling to the database in tests.
+
+```pascal
+[Test]
+procedure ProcessOrder_WithoutStock_RaisesException;
+begin
+  Assert.WillRaise(
+    procedure begin FSut.Process(FEmptyOrder); end,
+    EInvalidOrderException
+  );
+end;
+```
+
+### 🏛️ SOLID and DDD
+
+- **S** — One class, one responsibility. `TCustomerValidator` does not save to the bank.
+- **O** — Extension via interfaces, without modifying existing code.
+- **L** — Inheritance only with a clear contract. Preferred interfaces.
+- **I** — Small and specific interfaces. Avoid giant interfaces.
+- **D** — Dependency injection in the constructor, never hardcoded concrete instances.
+
+```pascal
+//✅ DIP in practice
+constructor TOrderService.Create(
+  ARepo: IOrderRepository;
+  ANotifier: INotificationService);
+begin
+  FRepo := ARepo;
+  FNotifier := ANotifier;
+end;
+```
+
+### 📖 Clean Code — Pascal Guide
+
+Consistent and mandatory nomenclatures:
+
+| Category | Convention | Example |
+|---|---|---|
+| Parameters | Prefix `A` | `ACustomerName` |
+| Private fields | Prefix `F` | `FCustomerName` |
+| Local variables | Prefix `L` | `LCustomer` |
+| Classes | Prefix `T` | `TCustomerService` |
+| Interfaces | Prefix `I` | `ICustomerRepository` |
+| Exceptions | Prefix `E` | `ECustomerNotFound` |
+
+---
+
+## 🛠️ Supported Frameworks and Libraries
+
+| Framework | Domain | Rules Included |
+|---|---|---|
+| **Horse** | Minimalist REST APIs | Controller/Service/Repository structure, middleware |
+| **Dext Framework** | .NET-style APIs, ORM, DI, Async | Minimal APIs, Entity ORM, `TAsyncTask.Run` |
+| **DelphiMVC (DMVC)** | REST APIs with Attributes | `[MVCPath]`, Active Record, JWT, RQL |
+| **ACBR** | Commercial Automation (NFe, CF-e, Boleto) | Tax isolation, without crossing with UI |
+| **Intraweb** | Stateful WebApps in Delphi | `UserSession`, no global session variables |
+| **DevExpress** | Advanced Enterprise UI | `TcxGrid`, `TdxLayoutControl`, skins and export |
+| **Firebird Database** | Corporate Database | FireDAC Connection, PSQL, generators, transactions, migrations |
+| **PostgreSQL Database** | Modern Database | FireDAC Connection, UPSERT, JSONB, Full-Text Search, PL/pgSQL |
+| **MySQL / MariaDB** | Popular Database | FireDAC Connection, AUTO_INCREMENT, UPSERT, JSON, FULLTEXT |
+| **DUnitX** | Unit Tests | Red-Green-Refactor, Fakes via interface |
+| **Design Patterns GoF** | Design Patterns | Creational, Structural and Behavioral with interfaces and ARC |
+| **Threading** | Multi-Threading | TThread, TTask, Synchronize/Queue, TCriticalSection, PPL |
+| **Code Refactoring** | Code Smells and Techniques | Extract Method/Class, Guard Clauses, Strategy, Parameter Object |
+
+---
+
+## 📂 Kit Structure
+
+```
+delphi-spec-kit/
+│
+├── AGENTS.md                        # 🌐 Universal rules (Codex, Copilot, Kiro, Antigravity, Gemini)
+├── README.md / README.tr-TR.md      # This file, English/Turkish pair
+├── LICENSE                          # MIT (see "Provenance" note in CONTRIBUTING.md)
+├── CODE_OF_CONDUCT.md               # Contributor Covenant v1.4
+├── CONTRIBUTING.md / CONTRIBUTING.tr-TR.md
+├── SECURITY.md / SECURITY.tr-TR.md
+│
+├── .agents/                         # 📦 SINGLE SOURCE OF TRUTH — edit here, nowhere else
+│   ├── rules/                       # Context-specific rules (15 topic files + sync-workflow.md)
+│   │   ├── sync-workflow.md         # How this whole multi-tool setup is kept in sync — read first
+│   │   ├── delphi-conventions.md    # Naming conventions and code style
+│   │   ├── memory-exceptions.md     # Memory management and exception patterns
+│   │   ├── tdd-patterns.md          # TDD and DUnitX
+│   │   ├── solid-patterns.md        # SOLID and DDD
+│   │   ├── design-patterns.md       # Design Patterns GoF (Creational, Structural, Behavioral)
+│   │   ├── refactoring.md           # Code refactoring (Extract Method, Guard Clauses, Strategy)
+│   │   ├── horse-patterns.md        # Horse REST Framework
+│   │   ├── dmvc-patterns.md         # DelphiMVC Framework
+│   │   ├── dext-patterns.md         # Dext Framework
+│   │   ├── acbr-patterns.md         # Commercial Automation (ACBr)
+│   │   ├── intraweb-patterns.md     # Intraweb WebApps
+│   │   ├── firebird-patterns.md     # Firebird Database (connection, PSQL, transactions)
+│   │   ├── postgresql-patterns.md   # PostgreSQL Database (UPSERT, JSONB, FTS)
+│   │   ├── mysql-patterns.md        # MySQL/MariaDB (AUTO_INCREMENT, JSON, UPSERT)
+│   │   └── threading-patterns.md    # Threading (TThread, TTask, Synchronize/Queue)
+│   ├── commands/
+│   │   └── review.md                # Slash-command source: /review
+│   └── skills/                      # On-demand skills (SKILL.md per folder) — read natively by
+│       │                            # Claude Code, Cursor, Codex CLI, Copilot and Gemini/Antigravity
+│       ├── clean-code/              # Clean Code and Pascal Guide
+│       ├── delphi-memory-exceptions/# Memory management and try..finally
+│       ├── delphi-patterns/         # Repository, Service, Factory
+│       ├── design-patterns/         # Design Patterns GoF (23 patterns)
+│       ├── refactoring/             # Refactoring (10 techniques, before/after)
+│       ├── tdd-dunitx/              # TDD with DUnitX
+│       ├── horse-framework/         # Horse REST API
+│       ├── dmvc-framework/          # DelphiMVC Framework
+│       ├── dext-framework/          # Dext Framework
+│       ├── acbr-components/         # ACBr components
+│       ├── intraweb-framework/      # Intraweb WebApps
+│       ├── devexpress-components/   # DevExpress UI
+│       ├── dunitx-testing/          # Unit testing
+│       ├── firebird-database/       # Firebird Database (connection, PSQL, generators)
+│       ├── postgresql-database/     # PostgreSQL/MariaDB (AUTO_INCREMENT, JSON, FULLTEXT)
+│       ├── threading/               # Threading (TThread, TTask, PPL, thread-safety)
+│       ├── mysql-database/          # MySQL/MariaDB (AUTO_INCREMENT, JSON, UPSERT)
+│       ├── code-review/             # Code review
+│       ├── aurelius-mapping/        # TMS Aurelius ORM — entity mapping attributes
+│       ├── aurelius-objects/        # TMS Aurelius ORM — TObjectManager CRUD/transactions
+│       ├── flexcel-net/             # TMS FlexCel — Excel from .NET (C#/VB.NET)
+│       ├── flexcel-vcl/             # TMS FlexCel — Excel from Delphi/VCL/FMX
+│       ├── rad-repo-scaffold/       # Bootstrap a purpose-fit AI-ready repo structure
+│       ├── rad-prompt-studio/       # Design/Analyze/Edit AI prompts, rules and skills — five-lens methodology
+│       ├── rad-skill-finder/        # Checks for an existing skill before writing a capability from scratch
+│       ├── rad-python/              # Helper/one-off scripting when a task needs it
+│       ├── rad-web-scraping/        # Structured data extraction from the web
+│       └── rad-powershell-master/   # PowerShell 7+ expertise — scripts, modules, CI/CD, cross-platform
+│
+├── tools/
+│   └── generate-ai-configs.ps1      # Regenerates .claude/rules, .cursor/rules, .claude/commands
+│                                     # from .agents/ — run after any edit under .agents/rules|commands
+│
+├── .claude/
+│   ├── CLAUDE.md                    # 🧠 Master system prompt for Claude
+│   ├── settings.json                # Permission settings
+│   ├── commands/                    # ⚙️ GENERATED from .agents/commands — do not hand-edit
+│   │   └── review.md
+│   └── rules/                       # ⚙️ GENERATED from .agents/rules — do not hand-edit
+│       └── (same 16 files as .agents/rules/, copied verbatim)
+│
+├── .github/
+│   └── copilot-instructions.md      # 🤖 Pre-prompt for GitHub Copilot (hand-authored, references AGENTS.md)
+│
+├── .cursor/
+│   └── rules/                       # ⚙️ GENERATED from .agents/rules — do not hand-edit
+│
+├── .gemini/
+│   └── rules/
+│       └── project-rules.md         # Hand-authored summary, same role as AGENTS.md but Gemini-specific
+│
+├── .kiro/
+│   └── steering/
+│       ├── product.md               # Product vision
+│       ├── tech.md                  # Technology stack
+│       ├── structure.md             # Layer architecture
+│       └── frameworks.md            # Framework guides
+│
+├── .specify/                        # AI-assisted spec templates
+│   ├── constitution.md              # Project constitution and constraints
+│   ├── plan-template.md             # Implementation plan template
+│   ├── spec-template.md             # Feature specification template
+│   └── tasks-template.md            # Task breakdown template
+│
+├── docs/
+│   ├── proje-haritasi.md            # File-by-file map of this kit (Turkish)
+│   ├── ai-ignore-strategy.md        # What AI agents should/shouldn't index
+│   └── delphi-expert-analysis.md    # Five-lens self-audit
+│
+├── src/                              # 📝 Default AI-generated output location (see AGENTS.md "Working Directory")
+│   └── README.md
+│
+└── examples/
+    ├── clean-unit-example.pas        # Well-organized unit (Golden Path)
+    ├── memory-exception-example.pas  # Correct memory and exception patterns
+    ├── repository-pattern.pas        # Complete Repository Pattern
+    ├── service-pattern.pas           # Complete Service Pattern
+    ├── design-patterns-example.pas   # Design Patterns GoF in practice
+    ├── refactoring-example.pas       # Refactoring before/after (6 techniques)
+    ├── tdd-dunitx-example.pas        # TDD and DUnitX in practice
+    ├── horse-api-example.pas         # REST API with Horse
+    ├── dmvc-controller-example.pas   # DMVC Controller with Attributes
+    ├── dext-api-example.pas          # Minimal API with Dext
+    ├── acbr-service-example.pas      # NF-e issuance with ACBr
+    ├── intraweb-form-example.pas     # Intraweb Form with UserSession
+    ├── firebird-repository-example.pas  # Repository with FireDAC + Firebird
+    ├── postgresql-repository-example.pas # Repository with FireDAC + PostgreSQL
+    ├── mysql-repository-example.pas  # Repository with FireDAC + MySQL
+    ├── threading-example.pas         # Threading patterns (TTask, BackgroundWorker, Producer-Consumer)
+    ├── file-copy-app/                # 📦 Complete app example: file copy with service layer
+    └── i18n-app/                     # 📦 Complete app example: internationalization (i18n)
+```
+
+---
+
+## ⚡ Quick Start
+
+### 1. Clone or download the kit
+
+```bash
+git clone https://github.com/delphicleancode/delphi-spec-kit.git
+```
+
+### 2. Copy to the root of your Delphi project
+
+```
+YourProject/
+├── MyApp.dpr
+├── AGENTS.md          ← copy from the root
+├── .agents/           ← copy the folder (single source of truth: rules, commands, skills)
+├── tools/             ← copy the folder (generate-ai-configs.ps1)
+├── .claude/           ← copy the folder (generated rules/commands already included)
+├── .github/           ← copy the folder
+├── .cursor/           ← copy the folder (generated rules already included)
+├── .gemini/           ← copy the folder
+├── .kiro/             ← copy the folder
+└── .specify/          ← copy the folder (optional — spec templates)
+```
+
+If you later add or edit a file under `.agents/rules/` or `.agents/commands/`,
+re-run `pwsh tools/generate-ai-configs.ps1` from the project root to refresh
+`.claude/rules`, `.cursor/rules` and `.claude/commands`.
+
+### 3. AI automatically takes over the rules
+
+- **Claude Code** — Applies `.claude/CLAUDE.md`, reads `.claude/rules/*.md` (generated) and `.agents/skills/*/SKILL.md` directly
+- **Cursor** — Reads `.cursor/rules/*.md` (generated) automatically by context
+- **Codex CLI** — Reads `AGENTS.md` at the project root, plus `.agents/skills/*/SKILL.md`
+- **GitHub Copilot** — Reads `.github/copilot-instructions.md` in workspace, plus `.agents/skills/*/SKILL.md`
+- **Antigravity / Gemini** — Reads `.gemini/rules/project-rules.md`, plus `.agents/skills/*/SKILL.md`
+- **Kiro** — Reads `.kiro/steering/*.md` as fixed product context
+
+> **No additional configuration required.** Open the project, use your preferred AI and notice the difference.
+
+---
+
+## 💡 Examples of Good Practices
+
+### Layer Architecture
+
+```
+src/
+├── Domain/         ← Entities, Value Objects, Repository Interfaces
+├── Application/    ← Services, Use Cases, DTOs
+├── Infrastructure/ ← FireDAC Repositories, external APIs
+└── Presentation/   ← VCL/FMX Forms, ViewModels
+tests/
+└── Unit/           ← DUnitX projects with isolated Fakes
+```
+
+> **Dependency rule:** `Presentation → Application → Domain ← Infrastructure`
+> **Domain never** depends on other layers.
+
+### Guard Clauses (no unnecessary nesting)
+
+```pascal
+procedure ProcessOrder(AOrder: TOrder);
+begin
+  if not Assigned(AOrder) then
+    raise EArgumentNilException.Create('AOrder cannot be nil');
+  if AOrder.Items.Count = 0 then
+    raise EBusinessRuleException.Create('Order must have at least one item');
+  if not AOrder.IsValid then
+    raise EValidationException.Create('Order validation failed');
+
+  //real logic here, no nesting
+  FRepository.Save(AOrder);
+  FNotifier.Send(AOrder.Customer.Email);
+end;
+```
+
+### Test with Fake via Interface
+
+```pascal
+type
+  TFakeOrderRepository = class(TInterfacedObject, IOrderRepository)
+  private
+    FOrders: TObjectList<TOrder>;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    procedure Save(AOrder: TOrder);
+    function FindById(AId: Integer): TOrder;
+  end;
+
+[TestFixture]
+TOrderServiceTest = class
+private
+  FSut: TOrderService;
+  FRepo: IOrderRepository;
+public
+  [Setup]
+  procedure SetUp;
+  [Test]
+  procedure PlaceOrder_ValidOrder_SavesToRepository;
+  [Test]
+  procedure PlaceOrder_EmptyItems_RaisesException;
+end;
+```
+
+---
+
+## 🎯 Design & Philosophy
+
+<!-- ![Design & Philosophy](docs/images/design-philosophy.png) -->
+<!-- Generate this image using the "Image 3 — Design & Philosophy" prompt in Prompts/image-prompts.md, save it to docs/images/design-philosophy.png, then uncomment the line above. -->
+
+**Zero-Leak by Construction.**
+
+This kit optimizes for one non-negotiable value above all others: a Delphi
+codebase that never leaks a handle, an object, or a database connection —
+not "usually cleans up," but structurally incapable of forgetting to. That
+is why the memory rule (`try..finally` on the line immediately after every
+`.Create`) is enforced as a hard pattern rather than a style suggestion,
+and why interfaces (ARC) are taught as the default for services and
+repositories instead of manual `Free` calls sprinkled through business
+logic. The deliberate tradeoff: this kit will keep nudging toward more
+`try..finally` blocks and more interface indirection than a minimal example
+strictly needs, because in a long-lived Delphi codebase the cost of one
+missed `Free` compounds silently for years, while the cost of one extra
+`try..finally` is paid once, at write time, and never again.
+
+---
+
+## 🚫 AI Ignore / Context Checklist
+
+This project enforces a multi-layer strategy to control what AI agents index and use as context. Before submitting a PR:
+
+- [ ] Build output folders of any new subproject are covered by `.gitignore`
+- [ ] `.cursorignore` includes any new heavy or binary paths
+- [ ] Essential instruction files (`AGENTS.md`, rules, skills, examples) are **NOT** excluded
+- [ ] `.vscode/settings.json` excludes are up to date for new artifact types
+- [ ] No secrets (`*.key`, `*.pfx`, `.env`) are committed or referenced
+
+> See [docs/ai-ignore-strategy.md](docs/ai-ignore-strategy.md) for the full rationale and maintenance guide.
+
+---
+
+## 🙏 Acknowledgments
+
+See [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md) for the open-source projects,
+commercial tools, and references this kit was built on.
+
+---
+
+## 🤝 Contributions
+
+Pull Requests are welcome! If your favorite Delphi framework or library needs a guide for AI, add:
+
+1. **Rule** → `.agents/rules/your-framework.md`, then run `pwsh tools/generate-ai-configs.ps1` to regenerate `.claude/rules/` and `.cursor/rules/` — do **not** hand-edit those two folders directly, your change will be overwritten on the next run.
+2. **Skill** → `.agents/skills/your-framework/SKILL.md` (one copy, read natively by every supported tool — no content to regenerate, but run `pwsh tools/generate-ai-configs.ps1` afterward so Claude Code also gets the matching `/your-framework` command wrapper).
+3. **Reference** → mention it in `AGENTS.md` (and `.gemini/rules/project-rules.md` if it's framework/database-specific, matching the existing entries).
+
+### How to contribute
+
+```bash
+# Fork and clone
+git fork https://github.com/delphicleancode/delphi-spec-kit
+git clone https://github.com/YOUR-FORK/delphi-spec-kit
+
+# Create a descriptive branch
+git checkout -b feat/add-remobjects-patterns
+
+# Commit and Pull Request
+git commit -m "feat: add RemObjects SDK patterns"
+git push origin feat/add-remobjects-patterns
+```
+
+---
+
+<div align="center">
+
+Buy the author a coffee via Pix: <pix@inovefast.com.br> ☕
+
+Made with ❤️ for the **Delphi** community.
+
+*[🇹🇷 Türkçe](README.tr-TR.md) · [Contributing](CONTRIBUTING.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [Security](SECURITY.md) · [Acknowledgments](ACKNOWLEDGMENTS.md)*
+
+*If this kit helped you, leave a ⭐ in the repository!*
+
+</div>
