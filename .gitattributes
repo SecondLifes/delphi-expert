@@ -1,4 +1,5 @@
 *.pas linguist-language=Pascal
 *.dfm linguist-language=Pascal
 *.dpr linguist-language=Pascal
-
+tools/generate-ai-configs.ps1 linguist-vendored
+.agents/skills/rad-repo-scaffold/scripts/apply_structure.py linguist-vendored
