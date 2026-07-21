@@ -178,12 +178,8 @@ begin
   try
     LCustomer.Insert;
     Render201Created('/api/customers/' + LCustomer.Id.ToString);
-  except
-    on E: Exception do
-    begin
-      LCustomer.Free;
-      raise;
-    end;
+  finally
+    LCustomer.Free; // BodyAs allocates — the caller owns it on every path, not just errors
   end;
 end;
 
@@ -196,12 +192,8 @@ begin
     LCustomer.Id := AId;
     LCustomer.Update;
     Render(HTTP_STATUS.OK, 'Updated');
-  except
-    on E: Exception do
-    begin
-      LCustomer.Free;
-      raise;
-    end;
+  finally
+    LCustomer.Free; // BodyAs allocates — the caller owns it on every path, not just errors
   end;
 end;
 
