@@ -12,7 +12,7 @@
 
 Kimlik çifti, System Analysis modunun zorunlu birlikte inceleme hedefidir. Fark doğrulaması dosyaların doğrudan okunması ve satır sayımıyla yapıldı.
 
-### [IMPORTANT-1] Kimlik dosyaları kapsam olarak ciddi biçimde ayrışmış
+### [WARNING-1] Kimlik dosyaları kapsam olarak ciddi biçimde ayrışmış
 - Category: WARNING
 - Lens(es): DevOps/Config Engineer, Context Engineer, Repo Auditor
 - Verification verdict: VERIFIED
@@ -22,4 +22,3 @@ Kimlik çifti, System Analysis modunun zorunlu birlikte inceleme hedefidir. Fark
 - Evidence: Bu oturumda satır sayıları sırasıyla `843` ve `125` ölçüldü; `Compare-Object` farklı içerik kümeleri döndürdü.
 - Impact: Araca göre farklı kod kalitesi, bellek güvenliği ve sistem yönlendirme davranışı oluşabilir.
 - Recommendation: Tek araç-agnostik kanonik kimlik kaynağını açıkça belirleyin; her iki dosyayı mekanik olarak türetilen eşdeğer talimatlar veya gerekçeli, test edilen araç-özgü delta olacak şekilde senkronize edin.
-
