@@ -35,6 +35,16 @@ interface in Infrastructure, never in a form event); **`TRESTClient`
 stack when the API is JSON-heavy** and you want request/response
 plumbing handled for you.
 
+**Third-party option — [RESTRequest4Delphi](https://github.com/viniciussanchez/RESTRequest4Delphi)**
+(MIT, 600+ stars, actively maintained): a fluent one-liner API over
+pluggable engines (RESTClient default on Delphi; Indy/Synapse/ICS/
+NetHTTP via `RR4D_*` conditional defines; fphttpclient on Lazarus).
+Worth reaching for when the project already uses it, needs Lazarus/FPC
+compatibility, or wants engine portability — see
+`references/consumption-patterns.md` for the pattern. RTL-only projects
+should still default to the first-party clients above (no extra
+dependency).
+
 ## Golden rules
 
 1. **Always set timeouts.** `ConnectionTimeout` and `ResponseTimeout`

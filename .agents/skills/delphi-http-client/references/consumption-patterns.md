@@ -100,6 +100,39 @@ end;
 - Object mapping: `TJson.JsonToObject<TCustomerDto>(LResponse.Content)`
   (from `REST.Json`) — remember the returned object is yours to free.
 
+## RESTRequest4Delphi — fluent third-party alternative
+
+[RESTRequest4Delphi](https://github.com/viniciussanchez/RESTRequest4Delphi)
+(MIT) wraps the whole request in one fluent chain, with the HTTP engine
+swappable underneath (default RESTClient on Delphi; `RR4D_INDY`,
+`RR4D_SYNAPSE`, `RR4D_ICS`, `RR4D_NETHTTP` conditional defines switch it;
+fphttpclient on Lazarus):
+
+```pascal
+uses RESTRequest4D;
+
+var
+  LResponse: IResponse;
+begin
+  LResponse := TRequest.New
+    .BaseURL(FConfig.BaseUrl)
+    .Resource('customers')
+    .AddParam('expand', 'orders')
+    .TokenBearer(FConfig.ApiToken)      // or BasicAuthentication(user, pass)
+    .Accept('application/json')
+    .Get;
+
+  if LResponse.StatusCode <> 200 then
+    raise EApiClientException.CreateFmt('%d %s',
+      [LResponse.StatusCode, LResponse.StatusText]);
+  ProcessJson(LResponse.JSONValue);
+end;
+```
+
+The golden rules still apply unchanged — status-first, no main-thread
+blocking, secrets from configuration. `IResponse` is interface-counted;
+no manual Free for the chain.
+
 ## Async — keep the UI alive
 
 ```pascal
