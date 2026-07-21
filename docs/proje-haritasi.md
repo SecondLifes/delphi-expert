@@ -80,6 +80,7 @@ Skill'ler, rules'tan farklı olarak **otomatik yüklenmez** — AI, konuyla ilgi
 | `dunitx-testing` | DUnitX proje yapısı, fixture, assertion referansı. |
 | `code-review` | Kod inceleme kontrol listesi (güvenlik, performans, SOLID, bellek). |
 | `horse-framework`, `dmvc-framework`, `dext-framework` | İlgili REST framework'ün derinlemesine kullanım rehberi. |
+| `delphi-http-client` | HTTP/REST API tüketimi — THTTPClient/TNetHTTPClient/TRESTClient seçimi, timeout/bellek/status disiplini, JSON, async, retry desenleri (`references/consumption-patterns.md`). Sistem analizinin doğruladığı boşluğu kapatmak için sıfırdan yazıldı (DocWiki doğrulamalı). |
 | `intraweb-framework`, `devexpress-components` | İlgili kütüphane/framework'ün derinlemesine kullanım rehberi. (`acbr-components` skill'i `.agents/rules/acbr-patterns.md`'ye birleştirildi — tek kaynak artık kural dosyası.) |
 | `firebird-database`, `postgresql-database`, `mysql-database` | İlgili veritabanının FireDAC ile derinlemesine kullanımı (bağlantı, migration, hata kodları). |
 | `threading` | Threading'in derinlemesine hali (Producer-Consumer, custom thread pool, cancellation token). |

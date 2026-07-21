@@ -221,6 +221,7 @@ delphi-spec-kit/
 │       ├── horse-framework/         # Horse REST API
 │       ├── dmvc-framework/          # DelphiMVC Framework
 │       ├── dext-framework/          # Dext Framework
+│       ├── delphi-http-client/      # Consuming HTTP/REST APIs (THTTPClient, TRESTClient)
 │       ├── intraweb-framework/      # Intraweb WebApps
 │       ├── devexpress-components/   # DevExpress UI
 │       ├── dunitx-testing/          # Unit testing
