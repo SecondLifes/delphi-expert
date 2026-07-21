@@ -1,4 +1,4 @@
-﻿unit Test.I18nApp.Core.Resources;
+unit Test.I18nApp.Core.Resources;
 
 interface
 

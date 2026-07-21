@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Complete example of Minimal API with Dext Framework (cesarliws/dext).
 /// Demonstrates: Dependency injection, Model Binding via IResult types and Responses.
 /// </summary>

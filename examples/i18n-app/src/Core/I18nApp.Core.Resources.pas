@@ -1,4 +1,4 @@
-﻿unit I18nApp.Core.Resources;
+unit I18nApp.Core.Resources;
 
 interface
 

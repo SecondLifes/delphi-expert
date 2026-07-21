@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Main form of the file copy application.
 /// Allows you to select source and destination folder, list and copy files.
 /// </summary>

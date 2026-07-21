@@ -1,4 +1,4 @@
-﻿unit I18nApp.Model.Connection;
+unit I18nApp.Model.Connection;
 
 interface
 

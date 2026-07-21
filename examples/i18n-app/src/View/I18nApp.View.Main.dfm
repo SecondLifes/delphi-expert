@@ -1,4 +1,4 @@
-﻿object MainForm: TMainForm
+object MainForm: TMainForm
   Left = 0
   Top = 0
   Caption = 'International Sales System'

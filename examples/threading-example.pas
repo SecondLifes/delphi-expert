@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Complete example of Threading & Multi-Threading in Delphi.
 /// Demonstrates: TThread, TTask, Synchronize/Queue, TCriticalSection,
 /// TInterlocked, TParallel.For, Generic BackgroundWorker, Producer-Consumer.

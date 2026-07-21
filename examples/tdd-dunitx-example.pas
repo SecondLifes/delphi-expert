@@ -1,4 +1,4 @@
-﻿unit MeuApp.Application.Order.ServiceTest;
+unit MeuApp.Application.Order.ServiceTest;
 
 // =========================================================================
 // Canonical example of TDD in Delphi with DUnitX

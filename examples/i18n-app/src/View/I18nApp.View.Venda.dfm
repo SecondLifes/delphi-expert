@@ -1,4 +1,4 @@
-﻿object VendaForm: TVendaForm
+object VendaForm: TVendaForm
   Left = 0
   Top = 0
   Caption = 'Sales Record'

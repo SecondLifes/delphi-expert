@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Conceptual example showing how to isolate a native component (TACBrNFe)
 /// in a service class, following the Adapter pattern and SOLID principles without coupling the UI.
 /// </summary>

@@ -1,4 +1,4 @@
-﻿object ProdutoForm: TProdutoForm
+object ProdutoForm: TProdutoForm
   Left = 0
   Top = 0
   Caption = 'Product Registration'

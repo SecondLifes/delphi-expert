@@ -1,4 +1,4 @@
-﻿object ClienteForm: TClienteForm
+object ClienteForm: TClienteForm
   Left = 0
   Top = 0
   Caption = 'Customer Registration'

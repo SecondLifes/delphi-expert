@@ -1,4 +1,4 @@
-﻿program FileCopy;
+program FileCopy;
 
 uses
   Vcl.Forms,

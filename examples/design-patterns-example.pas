@@ -1,4 +1,4 @@
-﻿unit MeuApp.Examples.DesignPatterns;
+unit MeuApp.Examples.DesignPatterns;
 {
   DESIGN PATTERNS IN DELPHI — Complete Practical Example
   ======================================================

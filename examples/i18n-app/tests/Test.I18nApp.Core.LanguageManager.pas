@@ -1,4 +1,4 @@
-﻿unit Test.I18nApp.Core.LanguageManager;
+unit Test.I18nApp.Core.LanguageManager;
 
 interface
 

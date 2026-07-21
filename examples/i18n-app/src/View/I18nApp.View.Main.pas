@@ -1,4 +1,4 @@
-﻿unit I18nApp.View.Main;
+unit I18nApp.View.Main;
 
 interface
 

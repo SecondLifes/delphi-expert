@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Complete example of Repository Pattern with FireDAC + Firebird.
 /// Demonstrates: Firebird connection, generators, RETURNING, transactions,
 /// stored procedures, error handling, domains and PSQL.

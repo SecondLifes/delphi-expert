@@ -1,4 +1,4 @@
-﻿unit I18nApp.Core.LanguageManager;
+unit I18nApp.Core.LanguageManager;
 
 interface
 

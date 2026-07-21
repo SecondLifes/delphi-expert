@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Complete Repository Pattern example with FireDAC + PostgreSQL.
 /// Demonstrates: PostgreSQL connection, IDENTITY, RETURNING, UPSERT, JSONB,
 /// Full-Text Search, PL/pgSQL functions, CTE, error handling and ENUM mapping.

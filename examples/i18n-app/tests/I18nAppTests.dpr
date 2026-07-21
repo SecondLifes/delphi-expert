@@ -1,4 +1,4 @@
-﻿program I18nAppTests;
+program I18nAppTests;
 
 {$IFNDEF TESTINSIGHT}
 {$APPTYPE CONSOLE}

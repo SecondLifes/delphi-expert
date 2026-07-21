@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Complete Repository Pattern example with FireDAC + MySQL.
 /// Demonstrates: AUTO_INCREMENT, LAST_INSERT_ID(), ON DUPLICATE KEY UPDATE,
 /// Native JSON, CALL procedure, FULLTEXT search, error handling.

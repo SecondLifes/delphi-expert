@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Example of a clean and well-organized unit in Delphi.
 /// Demonstrates: organization of sections, enums, interfaces, classes,
 /// properties, XMLDoc, guard clauses and memory management.

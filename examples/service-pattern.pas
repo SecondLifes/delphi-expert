@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Complete example of the Service pattern in Delphi.
 /// Demonstrates: SRP, DIP, constructor injection, guard clauses,
 /// business validation, named constants and XMLDoc.

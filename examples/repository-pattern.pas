@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Complete example of the Repository pattern in Delphi.
 /// Demonstrates: ISP, DIP, constructor injection, guard clauses,
 /// try/finally, Pascal and XMLDoc naming.

@@ -1,4 +1,4 @@
-﻿object Connection: TConnection
+object Connection: TConnection
   OldCreateOrder = False
   OnCreate = DataModuleCreate
   Height = 150

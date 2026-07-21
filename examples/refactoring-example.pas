@@ -1,4 +1,4 @@
-﻿unit MeuApp.Examples.Refactoring;
+unit MeuApp.Examples.Refactoring;
 {
   DELPHI CODE REFACTORING — Before/After Examples
   ===============================================

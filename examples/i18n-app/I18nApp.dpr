@@ -1,4 +1,4 @@
-﻿program I18nApp;
+program I18nApp;
 
 uses
   Vcl.Forms,

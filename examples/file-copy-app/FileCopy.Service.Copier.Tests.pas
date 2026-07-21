@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// DUnitX unit tests for TFileCopierService.
 /// Uses temporary directories created and destroyed in each test.
 /// </summary>

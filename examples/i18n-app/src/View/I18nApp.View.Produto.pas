@@ -1,4 +1,4 @@
-﻿unit I18nApp.View.Produto;
+unit I18nApp.View.Produto;
 
 interface
 

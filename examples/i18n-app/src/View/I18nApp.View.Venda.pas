@@ -1,4 +1,4 @@
-﻿unit I18nApp.View.Venda;
+unit I18nApp.View.Venda;
 
 interface
 

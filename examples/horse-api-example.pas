@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Complete REST API example with Horse Framework.
 /// Demonstrates: server configuration, RESTful routes, middleware,
 /// use of Services, guard clauses and error handling.

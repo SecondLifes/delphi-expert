@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Complete DMVC Controller example with Active Record.
 /// Demonstrates: MVCPath attributes, Active Record, serialization,
 /// error handling, guard clauses and memory management.

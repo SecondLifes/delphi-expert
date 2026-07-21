@@ -1,4 +1,4 @@
-﻿program FileCopyTests;
+program FileCopyTests;
 
 {$IFNDEF TESTINSIGHT}
 {$APPTYPE CONSOLE}

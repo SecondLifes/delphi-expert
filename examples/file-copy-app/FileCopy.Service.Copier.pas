@@ -1,4 +1,4 @@
-﻿/// <summary>
+/// <summary>
 /// Service responsible for the logic of copying files between directories.
 /// Follows the SRP principle: the copy logic is isolated from the UI.
 /// </summary>

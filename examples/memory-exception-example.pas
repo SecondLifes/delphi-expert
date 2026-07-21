@@ -1,4 +1,4 @@
-﻿unit MeuApp.Application.Billing.Service;
+unit MeuApp.Application.Billing.Service;
 
 interface
 
