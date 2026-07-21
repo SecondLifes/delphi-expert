@@ -133,7 +133,7 @@ LButton := TButton.Create(Self); //Self frees automatically
 | **What tests cover this?** | Tests may fail |
 | **Is it a shared component?** | Multiple points affected |
 
-> 🔴 **Rule:** Edit the file + all dependents in the SAME task.
+> 🔴 **Rule:** Edit the file + every dependent the change actually breaks in the SAME task — dependents that still compile and behave identically are out of scope, not license for a repo-wide sweep.
 
 ## 🔴 Self-Check (MANDATORY)
 
