@@ -102,8 +102,17 @@ silently; let the user decide.
 - **Frameworks:** VCL, FMX, FireDAC
 - **Database:** FireDAC (Firebird, PostgreSQL, MySQL/MariaDB)
 - **Tests:** DUnitX
-- **Build:** MSBuild / Delphi Compiler (dcc32/dcc64)
+- **Build:** MSBuild / Delphi Compiler (dcc32/dcc64), Boss (package manager)
 - **File extensions:** `.pas` (units), `.dfm`/`.fmx` (forms), `.dpr` (project), `.dpk` (package), `.dproj` (project config)
+
+> **Identity pair note:** this file and `.claude/CLAUDE.md` are two
+> tool-facing halves of one identity, kept deliberately asymmetric:
+> `.claude/CLAUDE.md` is the concise Claude Code entry (summary +
+> pointers into `.claude/rules/*.md`, which Claude loads contextually),
+> while this file is the full ceiling for tools without a per-topic
+> rules mechanism. Shared facts (stack list, crucial directives,
+> workflow sections) must stay in sync between the two; the depth
+> difference is the intended delta, content contradictions are drift.
 
 ## Naming Conventions — Pascal Guide
 
