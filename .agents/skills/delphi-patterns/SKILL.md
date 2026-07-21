@@ -212,8 +212,13 @@ begin
 
   LExisting := FRepository.FindByCpf(ACpf);
   if Assigned(LExisting) then
+  begin
+    LExisting.Free; // caller owns the returned instance — free before raising
     raise EBusinessRuleException.CreateFmt('CPF already registered: %s', [ACpf]);
+  end;
 
+  // Ownership contract: Insert takes ownership of LCustomer on success;
+  // the service frees it only when Insert never completed.
   LCustomer := TCustomer.Create(AName);
   try
     LCustomer.Cpf := ACpf;
