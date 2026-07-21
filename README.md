@@ -221,7 +221,6 @@ delphi-spec-kit/
 │       ├── horse-framework/         # Horse REST API
 │       ├── dmvc-framework/          # DelphiMVC Framework
 │       ├── dext-framework/          # Dext Framework
-│       ├── acbr-components/         # ACBr components
 │       ├── intraweb-framework/      # Intraweb WebApps
 │       ├── devexpress-components/   # DevExpress UI
 │       ├── dunitx-testing/          # Unit testing
@@ -232,7 +231,6 @@ delphi-spec-kit/
 │       ├── code-review/             # Code review
 │       ├── aurelius-mapping/        # TMS Aurelius ORM — entity mapping attributes
 │       ├── aurelius-objects/        # TMS Aurelius ORM — TObjectManager CRUD/transactions
-│       ├── flexcel-net/             # TMS FlexCel — Excel from .NET (C#/VB.NET)
 │       ├── flexcel-vcl/             # TMS FlexCel — Excel from Delphi/VCL/FMX
 │       ├── rad-repo-scaffold/       # Bootstrap a purpose-fit AI-ready repo structure
 │       ├── rad-prompt-studio/       # Design/Analyze/Edit AI prompts, rules and skills — five-lens methodology

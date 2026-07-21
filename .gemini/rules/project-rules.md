@@ -107,7 +107,7 @@ Consult specific skills for each framework:
 - **DMVC:** `.agents/skills/dmvc-framework/SKILL.md` — Full-featured REST APIs with Active Record
 - **Dext Framework:** `.agents/skills/dext-framework/SKILL.md` — Enterprise APIs with DI, ORM and Minimal APIs (.NET-like)
 - **Intraweb:** `.agents/skills/intraweb-framework/SKILL.md` — Stateful web development (VCL for the Web)
-- **ACBr:** `.agents/skills/acbr-components/SKILL.md` — Tax Libraries/Commercial Automation
+- **ACBr:** `.agents/rules/acbr-patterns.md` — Tax Libraries/Commercial Automation (rules file is the single source; the former acbr-components skill was merged into it)
 - **DevExpress:** `.agents/skills/devexpress-components/SKILL.md` — Advanced VCL components
 - **Firebird Database:** `.agents/skills/firebird-database/SKILL.md` — Connection, PSQL, generators, transactions, migrations
 - **PostgreSQL Database:** `.agents/skills/postgresql-database/SKILL.md` — Connection, PL/pgSQL, UPSERT, JSONB, full-text search
@@ -123,7 +123,6 @@ Consult specific skills for each framework:
 - **Code Review:** `.agents/skills/code-review/SKILL.md` — Code review checklist
 - **Aurelius Mapping:** `.agents/skills/aurelius-mapping/SKILL.md` — TMS Aurelius ORM entity mapping
 - **Aurelius Objects:** `.agents/skills/aurelius-objects/SKILL.md` — TMS Aurelius TObjectManager CRUD/transactions
-- **FlexCel (.NET):** `.agents/skills/flexcel-net/SKILL.md` — Excel from C#/VB.NET
 - **FlexCel (VCL):** `.agents/skills/flexcel-vcl/SKILL.md` — Excel from Delphi/VCL/FMX
 - **Rad Repo Scaffold:** `.agents/skills/rad-repo-scaffold/SKILL.md` — Purpose-fit AI repository structure
 - **Rad Prompt Studio:** `.agents/skills/rad-prompt-studio/SKILL.md` — Design/Analyze/Edit AI prompts, rules and skills (five-lens methodology, edit gated behind mandatory analysis/evaluation + user approval)

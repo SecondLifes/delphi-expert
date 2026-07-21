@@ -80,7 +80,7 @@ Skill'ler, rules'tan farklı olarak **otomatik yüklenmez** — AI, konuyla ilgi
 | `dunitx-testing` | DUnitX proje yapısı, fixture, assertion referansı. |
 | `code-review` | Kod inceleme kontrol listesi (güvenlik, performans, SOLID, bellek). |
 | `horse-framework`, `dmvc-framework`, `dext-framework` | İlgili REST framework'ün derinlemesine kullanım rehberi. |
-| `acbr-components`, `intraweb-framework`, `devexpress-components` | İlgili kütüphane/framework'ün derinlemesine kullanım rehberi. |
+| `intraweb-framework`, `devexpress-components` | İlgili kütüphane/framework'ün derinlemesine kullanım rehberi. (`acbr-components` skill'i `.agents/rules/acbr-patterns.md`'ye birleştirildi — tek kaynak artık kural dosyası.) |
 | `firebird-database`, `postgresql-database`, `mysql-database` | İlgili veritabanının FireDAC ile derinlemesine kullanımı (bağlantı, migration, hata kodları). |
 | `threading` | Threading'in derinlemesine hali (Producer-Consumer, custom thread pool, cancellation token). |
 
@@ -90,7 +90,6 @@ Skill'ler, rules'tan farklı olarak **otomatik yüklenmez** — AI, konuyla ilgi
 |---|---|---|
 | `aurelius-mapping` | TMS Aurelius ORM ile Delphi sınıflarını veritabanına mapleme (attribute'lar, automapping, inheritance). | Genel — herhangi bir Aurelius projesinde çalışır. |
 | `aurelius-objects` | Aurelius `TObjectManager` ile CRUD, transaction, concurrency. | Genel — herhangi bir Aurelius projesinde çalışır. |
-| `flexcel-net` | TMS FlexCel ile .NET'ten (C#/VB.NET) Excel okuma/yazma/PDF export. | Genel — Delphi projesiyle ilgisi yok, .NET tarafı için. |
 | `flexcel-vcl` | TMS FlexCel ile Delphi/VCL/FMX'ten Excel okuma/yazma/PDF export. | Genel — herhangi bir Delphi projesinde çalışır. |
 | `rad-repo-scaffold` *(eski adı: create-ai-repository)* | Bir proje tanımından/spec'ten yola çıkıp minimal, amaca uygun bir AI-repository iskeleti (klasör/dosya planı) üretir. | Genel amaçlı — Delphi'ye özgü değil, Codex için tasarlanmış (`agents/openai.yaml` içerir). |
 
