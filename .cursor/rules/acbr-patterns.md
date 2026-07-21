@@ -42,14 +42,40 @@ end;
 - Catch ACBr specific exceptions when possible.
 - Convert long component returns (e.g. status, rejection reasons) into application Object Results/Records instead of tying the application to the component's natural formatting string.
 
+## Signing/Crypto Library Abstraction (OpenSSL vs WinCrypt)
+
+Isolate the SSL/crypto library choice per target OS (e.g. Linux Docker vs
+Windows) inside the wrapper service — configure it **always via code**,
+dynamically, never fixed at design time:
+
+```pascal
+LAcbrNFe.Configuracoes.Geral.SSLLib := libWinCrypt; // or libOpenSSL per platform
+```
+
+## TEF Callbacks and Events
+
+`TACBrTEFD` works heavily through VCL events (`OnExibeMensagem`,
+`OnAguardaDigitacao`). Keep the component in the Business/Gateway layer by
+injecting a generic presentation handler, so headless/REST scenarios can
+override the "draw to screen" part:
+
+```pascal
+ITefPresentationHandler = interface
+  procedure ShowTefMessage(const Msg: string);
+  procedure ClearTefMessage;
+end;
+```
+
 ## Prefix Conventions (UI/Design Time)
 
 If you need to drop the component or instantiate it at runtime, follow these naming conventions:
 - **TACBrNFe:** `acbrNFe`
+- **TACBrNFCe:** `acbrNfce`
 - **TACBrCTe:** `acbrCTe`
 - **TACBrBoleto:** `acbrBoleto`
 - **TACBrTEFD:** `acbrTef`
 - **TACBrPosPrinter:** `acbrPosPrinter`
 - **TACBrECF:** `acbrEcf`
 - **TACBrCEP:** `acbrCep`
+- **TACBrSAT:** `acbrSat`
 

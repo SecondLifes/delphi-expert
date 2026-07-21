@@ -44,7 +44,7 @@ This spec-kit supports three popular frameworks from the Delphi ecosystem. The c
 
 - **When to use:** Issuing tax documents (NF-e, NFC-e, CT-e, SAT), TEF, Bills and access to non-fiscal hardware.
 - **Architecture:** Do not throw visual components directly into forms. Create Services/Adapters (`INFeService`) that inject and isolate the `TACBrNFe` component.
-- **Skills:** `.agents/skills/acbr-components/SKILL.md`
+- **Rules:** `.agents/rules/acbr-patterns.md` (former acbr-components skill merged here)
 - **Rules:** `.cursor/rules/acbr-patterns.md`
 
 ### Intraweb Framework
