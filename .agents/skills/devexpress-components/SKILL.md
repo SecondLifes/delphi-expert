@@ -7,7 +7,7 @@ description: "Standards for using DevExpress VCL components (TcxGrid, TdxLayoutC
 
 Use this skill when developing rich interfaces with **DevExpress** VCL components for Delphi.
 
-> **Naming note:** do not call these components "Dext" or "DEXT" — that name is reserved for the unrelated **Dext Framework** (`dext-framework` skill, a .NET-style backend/DI/ORM framework). See `frameworks.md` for the disambiguation.
+> **Naming note:** do not call these components "Dext" or "DEXT" — that name is reserved for the unrelated **Dext Framework** (`dext-framework` skill, a .NET-style backend/DI/ORM framework). See `.kiro/steering/frameworks.md` for the disambiguation.
 
 ## When to Use
 
@@ -220,7 +220,7 @@ end;
 | **Skins** | Use `TdxSkinController` in the main form |
 | **Layout** | Prefer `TdxLayoutControl` to manual positioning |
 | **Grid** | Configure at `FormCreate`, never at design-time for dynamic columns |
-| **Filters** | Use `DataController.Filter` — do not filter via SQL when possible |
+| **Filters** | Use `DataController.Filter` for client-side refinement of an already server-limited dataset — paging/authorization-critical filtering still belongs in the SQL/server layer |
 | **Summaries** | Configure `FooterSummaryItems` instead of calculating manually |
 | **Exports** | Use `cxGridExportLink` — do not redeploy export |
 
@@ -231,6 +231,6 @@ end;
 - [ ] Footer summaries configured with BR formats (`R$ #,##0.00`)?
 - [ ] `TdxLayoutControl` used for editing forms?
 - [ ] Grid columns with `Caption`, `Width` and `Alignment`?
-- [ ] Filters using `DataController.Filter` (not SQL)?
+- [ ] Filters: `DataController.Filter` only on server-limited data (paging/authorization filters stay in SQL)?
 - [ ] Export via `cxGridExportLink`?
 - [ ] Component prefixes following the standard table?
