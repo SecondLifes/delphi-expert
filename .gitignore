@@ -57,3 +57,6 @@ modules/
 # --- OS Artifacts ---
 Thumbs.db
 .DS_Store
+
+# --- Local dev convenience scripts (not part of the published kit) ---
+update.bat

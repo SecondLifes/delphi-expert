@@ -15,8 +15,7 @@
 
 *[🇹🇷 Türkçe](README.tr-TR.md) · [Contributing](CONTRIBUTING.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [Security](SECURITY.md) · [Acknowledgments](ACKNOWLEDGMENTS.md)*
 
-<!-- ![Overview](docs/images/overview.png) -->
-<!-- Generate this image using the "Image 1 — Overview" prompt in Prompts/image-prompts.md, save it to docs/images/overview.png, then uncomment the line above. -->
+![Overview](docs/images/overview.png)
 
 </div>
 
@@ -26,10 +25,6 @@
 <www.inovefast.com.br>
 
 Integrations with payment platforms and services (Asaas, MercadoPago, Cielo, PagSeguro, D4sign, Webstore, MelhorEnvio, Groq)
-
-**i9DBTools**
-<www.inovefast.com.br/i9dbTools/>
-Manage MySQL, PostgreSQL, Firebird and SQLite in one place, with AI to generate and explain SQL in natural language, optimize queries and create Brazilian fake data in seconds.
 
 ## 📋 Index
 
@@ -95,8 +90,7 @@ The **Delphi AI Spec-Kit** is not a code framework — it's a set of **behavior 
 
 ## 🌟 Key Guidelines Taught to AI
 
-<!-- ![Core Features](docs/images/core-features.png) -->
-<!-- Generate this image using the "Image 2 — Core Features" prompt in Prompts/image-prompts.md, save it to docs/images/core-features.png, then uncomment the line above. -->
+![Core Features](docs/images/core-features.png)
 
 ### 🧠 Memory Management Zero-Leak
 
@@ -422,8 +416,7 @@ end;
 
 ## 🎯 Design & Philosophy
 
-<!-- ![Design & Philosophy](docs/images/design-philosophy.png) -->
-<!-- Generate this image using the "Image 3 — Design & Philosophy" prompt in Prompts/image-prompts.md, save it to docs/images/design-philosophy.png, then uncomment the line above. -->
+ ![Design & Philosophy](docs/images/design-philosophy.png)
 
 **Zero-Leak by Construction.**
 
