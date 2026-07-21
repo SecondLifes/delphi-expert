@@ -28,6 +28,17 @@ PROACTIVELY activate for ANY PowerShell-related task:
 
 ---
 
+## Usage
+
+| You say | What happens |
+|---|---|
+| `"Write/review this .ps1 script"` | Runs the Core Workflow below — identifies scope/platform, checks `$PSVersionTable`, loads only the reference file(s) the task actually needs, applies the Pre-Flight Checklist before finalizing. |
+| `"Set up a GitHub Actions/Azure DevOps pipeline for this"` | Loads `references/cicd-integration.md` for multi-platform build/test matrix patterns. |
+| `"Automate this in Azure/AWS/Microsoft 365"` | Loads `references/modules-and-gallery.md` — Az, Microsoft.Graph, AWS Tools, PSGallery install guidance. |
+| `"Is this script secure? How do I handle credentials?"` | Loads `references/security-2025.md` — JEA, WDAC, Constrained Language Mode, Script Block Logging, credential handling, code signing. |
+| `"Why is this slow / how do I write a Pester test?"` | Loads `references/syntax-reference.md` — cmdlet reference, pipeline, error handling, Pester, performance tuning. |
+| `"This needs to run on Windows and Linux"` | Loads `references/cross-platform-patterns.md` — `$IsWindows`/`$IsLinux`/`$IsMacOS`, path handling, encoding, shell detection. |
+
 ## Reference Map
 
 Detailed material lives in `references/`. Load only what the current task needs.
@@ -171,7 +182,7 @@ Expand this skeleton using patterns from `references/syntax-reference.md` (advan
 - Az Module Docs: https://learn.microsoft.com/powershell/azure
 - Microsoft Graph Docs: https://learn.microsoft.com/graph/powershell
 
-For shell detection on Windows (PowerShell vs Git Bash), see the `powershell-shell-detection` skill.
+For shell detection on Windows (PowerShell vs Git Bash), see `references/cross-platform-patterns.md`'s "Shell Detection" guidance in this skill.
 
 ---
 

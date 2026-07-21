@@ -132,7 +132,7 @@ fi
 - **PowerShell:** `C:\Users\John` or `C:/Users/John` (both work in PS 7+)
 - **Git Bash:** `/c/Users/John` (Unix-style, auto-converts to Windows when calling Windows tools)
 
-See `powershell-shell-detection` skill for comprehensive cross-shell guidance.
+The comparison above is this skill's own cross-shell guidance — there is no separate shell-detection skill.
 
 ## Line Endings
 

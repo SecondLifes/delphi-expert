@@ -398,6 +398,19 @@ git push origin feat/add-remobjects-patterns
 
 ---
 
+## 🗣️ Kullanabileceğiniz AI Komutları
+
+**Bu kit'in kendisini** çalışma klasörü olarak herhangi bir desteklenen AI CLI ile açın (Claude Code, Codex, Gemini/Antigravity, Cursor) — aşağıdaki komutlar, pakete gömülü `rad-prompt-studio` skill'i ve kit'in kendi `AGENTS.md`'si üzerinden yerel çalışır:
+
+| Siz derseniz | Ne olur |
+|---|---|
+| `Sistemi analiz et` | Bu kit'in kendi sistem katmanını analiz eder (`.agents/skills/`, `.agents/rules/`, `.agents/commands/`, `AGENTS.md`, `.claude/CLAUDE.md`) — `examples/`, `docs/`, `src/`, `tools/` siz istemedikçe kapsam dışıdır. Rapor kit'in kendi `analysis/result/{ai}_v{n}.md` klasörüne düşer; denetim geçmişi kit'le birlikte taşınır. |
+| `Değerlendir` | `analysis/result/` içindeki mevcut raporları güncel içerikle karşılaştırıp not verir (`STILL_VALID`/`STALE`/`REFUTED`...), düzeltme listesini sunar ve onayınızı bekler. |
+| `Düzelt: <hedef>` | Onay-kapılı düzenleme: analiz → eski raporların değerlendirmesi → açık onayınız → düzenleme. Düzenlenen dosya paylaşılan gömülü bir skill (`rad-*`) veya `Prompts/system/` master'ı ise ve bu kit, üst AI-Spec-Kits-Maker workspace'inin içindeyse, aynı düzeltme üstteki master kopyaya da uygulanır — iki taraf hep güncel kalır. |
+| `<konu> için skill var mı?` | Gömülü `rad-skill-finder` yerel → `npx skills` ekosistemi → dizinler → web sırasıyla arar; onayınız olmadan asla kurulum yapmaz. |
+
+---
+
 <div align="center">
 
 Pix ile yazara bir kahve ısmarlayın: <pix@inovefast.com.br> ☕

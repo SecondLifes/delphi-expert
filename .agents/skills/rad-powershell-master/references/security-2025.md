@@ -62,14 +62,22 @@ Recommended for all non-admin users:
 # Check current language mode
 $ExecutionContext.SessionState.LanguageMode
 # Output: FullLanguage (admin) or ConstrainedLanguage (standard user)
-
-# Enable system-wide via environment variable
-[Environment]::SetEnvironmentVariable(
-    "__PSLockdownPolicy",
-    "4",
-    [System.EnvironmentVariableTarget]::Machine
-)
 ```
+
+**Enforce CLM only through an application-control policy** — WDAC/App
+Control for Business (see the WDAC section above) or AppLocker.
+PowerShell enters Constrained Language Mode automatically when such a
+policy is in effect; that is the only supported, tamper-resistant way to
+apply it.
+
+> ⚠️ Do **not** use the `__PSLockdownPolicy` environment variable to
+> "enable" CLM. It is an undocumented debug/test hook, not a security
+> boundary: anyone who can edit environment variables (any admin, or the
+> attacker you're defending against) can simply remove it, and Microsoft
+> explicitly documents WDAC/AppLocker as the supported enforcement path.
+> Treating the variable as production security creates false confidence.
+> (Sources: PowerShell Team, "PowerShell Constrained Language Mode",
+> devblogs.microsoft.com; Microsoft Learn `about_Language_Modes`.)
 
 ## Script Block Logging
 

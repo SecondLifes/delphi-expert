@@ -28,7 +28,7 @@ Integrations with payment platforms and services (Asaas, MercadoPago, Cielo, Pag
 
 ## 📋 Index
 
-- [Turkish-Türkiye](README.tr-TR.md)
+- [Turkish-](README.tr-TR.md)Türkçe
 - [What is this project?](#-what-is-this-project)
 - [Why use?](#-why-use)
 - [Supported AI-Tools](#-supported-ai-tools)
@@ -478,6 +478,19 @@ git checkout -b feat/add-remobjects-patterns
 git commit -m "feat: add RemObjects SDK patterns"
 git push origin feat/add-remobjects-patterns
 ```
+
+---
+
+## 🗣️ AI Commands You Can Use
+
+Open **this kit itself** as the working folder in any supported AI CLI (Claude Code, Codex, Gemini/Antigravity, Cursor) — the commands below run locally, driven by the bundled `rad-prompt-studio` skill and this kit's own `AGENTS.md`:
+
+| You say | What happens |
+|---|---|
+| `Sistemi analiz et` / `Analyze the system` | Analyzes this kit's own system layer (`.agents/skills/`, `.agents/rules/`, `.agents/commands/`, `AGENTS.md`, `.claude/CLAUDE.md`) — `examples/`, `docs/`, `src/`, `tools/` stay out unless you ask. The report lands in this kit's own `analysis/result/{ai}_v{n}.md`, so audit history travels with the kit. |
+| `Değerlendir` / `Evaluate the findings` | Grades the existing reports in `analysis/result/` against current content (`STILL_VALID`/`STALE`/`REFUTED`...), presents a correction list, and waits for your approval. |
+| `Düzelt: <hedef>` / `Fix <target>` | Approval-gated edit: analysis → evaluation of priors → your explicit approval → the edit. If the edited file is a bundled shared skill (`rad-*`) or a `Prompts/system/` master and this kit sits inside its parent AI-Spec-Kits-Maker workspace, the same fix is applied to the parent's master copy too — both sides stay current. |
+| `<konu> için skill var mı?` / `Is there a skill for <topic>?` | The bundled `rad-skill-finder` searches local → `npx skills` ecosystem → directories → web; never installs anything without your approval. |
 
 ---
 
