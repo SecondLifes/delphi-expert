@@ -43,6 +43,12 @@ begin
 end;
 ```
 
+> **Exceptions in async events:** an unhandled exception inside an
+> `Async*` handler does not surface like a desktop dialog — wrap the
+> handler body in `try..except`, log the error server-side, and report
+> it to the user via `WebApplication.ShowMessage` (or a status region).
+> Never let an async event swallow a failure silently.
+
 ## 4. Separation of Rules and UI
 It is easy to build monstrous projects on the Intraweb by grouping the entire system rule behind the click (ex: num `iwBtnProcessarAsyncClick`). Follow the SRP (Single Responsibility Principle) principles:
 - The form maps to the Controller request and re-renders components. The rules remain in the *Application/Services* layer.
