@@ -4,6 +4,15 @@ All notable changes to the Delphi AI Spec-Kit are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) ·
 Versioning: [SemVer](https://semver.org/) via annotated git tags.
 
+## [Unreleased]
+
+### Added
+
+- `delphi-http-client` skill — consuming HTTP/REST APIs
+  (THTTPClient/TNetHTTPClient/TRESTClient decision table, timeout/memory/
+  status discipline, JSON, async, retry patterns). Closes the verified
+  server-only gap found by the system analysis (#18)
+
 ## [1.1.0] - 2026-07-21
 
 Result of a three-way independent system analysis (Claude, Codex, Gemini)
