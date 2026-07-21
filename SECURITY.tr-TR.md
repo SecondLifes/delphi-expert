@@ -11,7 +11,7 @@
 
 ## Güvenlik Açığı Bildirme
 
-Güvenliği ciddiye alıyoruz. Bu kitte — güvensiz davranışa, kimlik bilgisi sızıntısına veya istenmeyen dosya/veri kaybına yol açabilecek bir kural, skill veya generator script'inde — bir güvenlik açığı bulursanız, lütfen `security` etiketiyle **[FILL IN: repo URL]/issues** üzerinden, veya sorun henüz herkese açık olmamalıysa özel olarak **baspinar99@gmail.com** adresinden bildirin.
+Güvenliği ciddiye alıyoruz. Bu kitte — güvensiz davranışa, kimlik bilgisi sızıntısına veya istenmeyen dosya/veri kaybına yol açabilecek bir kural, skill veya generator script'inde — bir güvenlik açığı bulursanız, lütfen `security` etiketiyle **[FILL IN: repo URL]/issues** üzerinden, veya sorun henüz herkese açık olmamalıysa özel olarak **baspinar99@gmail.com veya emr.pov@gmail.com** adresinden bildirin.
 
 Lütfen şunları ekleyin:
 

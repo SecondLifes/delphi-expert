@@ -40,6 +40,15 @@ sources of guidance):
 - Gang of Four *Design Patterns* — structure and terminology for the 23 patterns covered in `design-patterns.md` and the `design-patterns` skill
 - Martin Fowler's *Refactoring* — code-smell catalogue and technique names used in `refactoring.md` (Extract Method, Extract Class, Guard Clauses, etc.)
 
+## 👥 Project Contributors
+
+People who have contributed to this kit itself (its rules, skills, and
+conventions — not the upstream projects credited above).
+
+- baspinar99@gmail.com
+- emr.pov@gmail.com
+- re.baspinar@gmail.com
+
 ---
 
 *If this kit uses something not credited here, please open an issue —

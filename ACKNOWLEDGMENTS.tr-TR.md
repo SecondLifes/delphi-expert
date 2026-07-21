@@ -40,6 +40,16 @@ sadece rehberlik kaynakları):
 - Gang of Four *Design Patterns* — `design-patterns.md` ve `design-patterns` skill'inde ele alınan 23 kalıbın yapısı ve terminolojisi
 - Martin Fowler'ın *Refactoring*'i — `refactoring.md`'de kullanılan code-smell kataloğu ve teknik isimleri (Extract Method, Extract Class, Guard Clauses, vb.)
 
+## 👥 Proje Katkıda Bulunanları
+
+Bu kitin kendisine (yukarıda teşekkür edilen upstream projelere değil,
+bu kitin kurallarına/skill'lerine/konvansiyonlarına) katkıda bulunan
+kişiler.
+
+- baspinar99@gmail.com
+- emr.pov@gmail.com
+- re.baspinar@gmail.com
+
 ---
 
 *Bu kit burada teşekkür edilmemiş bir şey kullanıyorsa lütfen bir issue
