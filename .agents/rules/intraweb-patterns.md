@@ -24,7 +24,7 @@ When developing a native web application in Delphi using the Intraweb framework,
   //Correct: Asynchronous Events (Ajax)
   procedure TIWFormClientes.iwBtnSalvarAsyncClick(Sender: TObject; EventParams: TStringList);
   begin
-    //Bank recordings and color change in the local interface
+    //Database writes and color change in the local interface
     iwLblStatus.Caption := 'Salvo!';
   end;
   ```
@@ -35,7 +35,7 @@ When developing a native web application in Delphi using the Intraweb framework,
 
 ## 4. Business Rule Hiding (SRP)
 
-- **Rule:** The `TIWAppForm` is the View (and loosely its controller/router). No business's primary insertion engine cannot live in this `TIWAppForm.pas`.
+- **Rule:** The `TIWAppForm` is the View (and loosely its controller/router). Business logic must NOT live in this `TIWAppForm.pas`.
 - **Implementation:** The injectable model class, `THouseService.Register()`, manages rule manipulation calls clean of any connection with ServerController components - Returning abstract data capable of rendering in Forms.
 
 ## 5. Prefixed Naming Convention `iw`

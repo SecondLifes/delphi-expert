@@ -12,7 +12,7 @@ Use these rules when developing REST APIs with the Horse framework.
 
 - Controller is a class with `class procedure RegisterRoutes`
 - Cada handler: `class procedure Nome(AReq: THorseRequest; ARes: THorseResponse; ANext: TProc)`
-- Controllers DO NOT access the bank directly — they delegate it to Services
+- Controllers DO NOT access the database directly — they delegate it to Services
 
 ## Route Conventions
 
