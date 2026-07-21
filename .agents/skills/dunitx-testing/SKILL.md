@@ -90,7 +90,7 @@ end;
 procedure TCustomerServiceTest.TearDown;
 begin
   FService.Free;
-  //FMockRepo is interface — released automatically
+  FMockRepo := nil; // release the interface explicitly — keeps each test's lifetime isolated
 end;
 
 [Test]
@@ -200,7 +200,7 @@ implementation
 constructor TMemoryCustomerRepository.Create;
 begin
   inherited Create;
-  FItems := TObjectList<TCustomer>.Create(False);
+  FItems := TObjectList<TCustomer>.Create(True); // owns items — Insert transfers ownership to the fake, Destroy frees them
   FNextId := 1;
 end;
 
