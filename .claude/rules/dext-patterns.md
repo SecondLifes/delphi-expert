@@ -59,6 +59,7 @@ var Orders := DbContext.Orders
 DbContext.Products
   .Where(P.Category = 'Outdated')
   .Update
+  .Set(P.Discontinued, True)   // without a Set the statement has nothing to write
   .Execute;
 ```
 

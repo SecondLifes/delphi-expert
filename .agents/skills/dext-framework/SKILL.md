@@ -122,6 +122,7 @@ With Dext ORM, Updates can run in the database without pulling data into memory 
 DbContext.Orders
   .Where(O.Status = 'Pending')
   .Update
+  .Set(O.Status, 'Processed')   // without a Set the statement has nothing to write
   .Execute;
 ```
 
