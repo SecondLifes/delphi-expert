@@ -16,6 +16,13 @@ non-negotiable defaults, not stylistic suggestions.
 
 ## Skill Check (Mandatory)
 
+> **Evidence required, scope expanded:** the check covers skills,
+> plugins, and MCP servers alike. Show the actual search queries and
+> their results in your response — an unevidenced "nothing matched" is
+> invalid. Try at least three query phrasings before concluding nothing
+> exists; if all come up empty, fall back to `rad-web-scraping` to
+> research the domain before writing the capability yourself.
+
 Before writing any non-trivial capability from scratch — a new framework
 integration, a concurrency primitive, or anything with an established best
 practice beyond basic Object Pascal syntax — invoke the `rad-skill-finder`
