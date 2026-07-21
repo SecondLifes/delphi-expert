@@ -51,7 +51,7 @@ end.
 
 - ❌ `with` statement
 - ❌ Global variables
-- ❌ Generic Catch (`except on E: Exception`)
+- ❌ Generic Catch (`except on E: Exception`) in business/domain code — allowed only at top-level boundaries (thread roots, request handlers, application-level last-resort handlers) where it must log and re-raise or translate, never swallow
 - ❌ Magic numbers — use constants
 - ❌ Hardcoded strings — use `resourcestring` or constants
 - ❌ Methods > 20 lines
