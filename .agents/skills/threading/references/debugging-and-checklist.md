@@ -19,6 +19,12 @@ TThread.CreateAnonymousThread(
       end);
   end).Start;
 
+//⚠️ Lifecycle: a queued anonymous method runs LATER on the main thread —
+//the form/control it captures (lblStatus) may already be destroyed by then.
+//Guard against it: cancel/wait for worker threads in the form's
+//OnClose/destructor (TThread.RemoveQueuedEvents(Self) helps), or queue
+//against the owning object instead of nil so pending events can be purged.
+
 //❌ NEVER create thread with FreeOnTerminate=True and keep reference
 FMyThread := TMyThread.Create(True);
 FMyThread.FreeOnTerminate := True;
