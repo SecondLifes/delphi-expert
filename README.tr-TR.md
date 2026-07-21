@@ -404,7 +404,7 @@ git push origin feat/add-remobjects-patterns
 
 | Siz derseniz | Ne olur |
 |---|---|
-| `Sistemi analiz et` | Bu kit'in kendi sistem katmanını analiz eder (`.agents/skills/`, `.agents/rules/`, `.agents/commands/`, `AGENTS.md`, `.claude/CLAUDE.md`) — `examples/`, `docs/`, `src/`, `tools/` siz istemedikçe kapsam dışıdır. Rapor kit'in kendi `analysis/result/{ai}_v{n}.md` klasörüne düşer; denetim geçmişi kit'le birlikte taşınır. |
+| `Sistemi analiz et` | Bu kit'in kendi sistem katmanını analiz eder (`.agents/skills/`, `.agents/rules/`, `.agents/commands/`, `AGENTS.md`, `.claude/CLAUDE.md`) — `examples/`, `docs/`, `src/`, `tools/` siz istemedikçe kapsam dışıdır. Rapor kit'in kendi `analysis/result/{ai}_v{n}.md` klasörüne düşer — yerel bir çalışma dosyasıdır, bilerek gitignore'lanmıştır; uygulanan düzeltmelerin kalıcı kaydı git geçmişi + issue'lar + CHANGELOG'dur. |
 | `Değerlendir` | `analysis/result/` içindeki mevcut raporları güncel içerikle karşılaştırıp not verir (`STILL_VALID`/`STALE`/`REFUTED`...), düzeltme listesini sunar ve onayınızı bekler. |
 | `Düzelt: <hedef>` | Onay-kapılı düzenleme: analiz → eski raporların değerlendirmesi → açık onayınız → düzenleme. Düzenlenen dosya paylaşılan gömülü bir skill (`rad-*`) veya `Prompts/system/` master'ı ise ve bu kit, üst AI-Spec-Kits-Maker workspace'inin içindeyse, aynı düzeltme üstteki master kopyaya da uygulanır — iki taraf hep güncel kalır. |
 | `<konu> için skill var mı?` | Gömülü `rad-skill-finder` yerel → `npx skills` ekosistemi → dizinler → web sırasıyla arar; onayınız olmadan asla kurulum yapmaz. |
