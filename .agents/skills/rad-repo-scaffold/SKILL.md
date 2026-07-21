@@ -16,7 +16,7 @@ Create only the structure justified by the project's purpose, technology, workfl
 5. Read [references/structure-catalog.md](references/structure-catalog.md); also read [references/memory-pattern.md](references/memory-pattern.md) when a memory workflow is in scope. Propose only justified paths and give a one-line reason for every top-level entry.
 6. Separate paths into required now, optional later, and excluded. Explain exclusions for tempting but unnecessary AI-tool folders. Note, in the report only, any companion AI tool from the catalog's "Companion AI tools" list that plausibly fits the project's scale — never install or configure one without explicit confirmation.
 7. Confirm before creating a large structure, modifying existing files, or adding unrequested tool-specific configuration.
-8. Save the approved structure as JSON. Run `python scripts/apply_structure.py --root <repo> --plan <plan.json>`, review its dry run, then rerun with `--apply`.
+8. Save the approved structure as JSON. Run `python scripts/apply_structure.py --root <repo> --plan <plan.json>`, review its dry run, then rerun with `--apply`. **Prerequisite:** this step needs a Python 3 interpreter on PATH — it is the only part of this kit that does; if Python isn't available, create the approved folders/files manually (or via PowerShell) following the same plan JSON instead of skipping the scaffold.
 9. Verify and report created, skipped, and conflicting paths.
 
 ## Plan Format
