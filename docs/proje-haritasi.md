@@ -139,7 +139,7 @@ Bu klasörlerin çoğu **üretilmiş** (generated) içerik barındırır — kay
 | `proje-haritasi.md` | Bu dosya. |
 | `ai-ignore-strategy.md` | Hangi dosyaların AI bağlamından hariç tutulacağı/tutulmayacağı stratejisi (`.gitignore`, `.cursorignore`, `.vscode/settings.json` ile ilişkisi). |
 | `delphi-expert-analysis.md` | Beş-mercek öz-denetimi (Prompt Engineer & Analyst, Repo Auditor, DevOps/Config Engineer, Systems Forensics Analyst, Context Engineer) — bu kitin 2026-07-19 göçünden sonraki durumunu değerlendirir. |
-| `Prompts/image-prompts.md` | README banner'ları için 3 AI görsel üretim prompt'u (Overview, Core Features, Design & Philosophy) — accent renk "deep red and burnt-orange" (Delphi'nin klasik kırmızı alev logosu), Image 2'nin özellik listesi bu kitin gerçek kurallarını (zero-leak bellek yönetimi, SOLID/DI, TDD red-green-refactor, katmanlı mimari) görsel metaforlarla anlatır. Gerçek PNG'lerin üretimi kapsam dışı — README'deki üç HTML-comment placeholder, görsel üretilene kadar yorumda kalır. |
+| `Prompts/image-prompts.md` / `.tr-TR.md` | README banner'ları için 3 AI görsel üretim prompt'u — kendi başına yeterli, kite özgü sanat yönetimi: **"Kahin'in Alevi"** (antik Delphi tapınağı; ay ışığında mermer + indigo alacakaranlık + kırmızı-turuncu kutsal alev; robot/maskot/bilgisayar yok). Eski paylaşılan `Prompts/system/` temel-prompt şeması emekliye ayrıldı — kitler arası birbirine benzeyen maskot-robot banner'ları üretiyordu. README'lerdeki (EN+TR) görsel etiketleri artık açık; yeni PNG'ler üretilip `docs/images/`e inince eskilerinin yerini alır. |
 
 ## `src/`
 

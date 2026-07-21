@@ -14,8 +14,7 @@
 
 *[🇬🇧 English](README.md) · [Katkıda Bulunma](CONTRIBUTING.tr-TR.md) · [Davranış Kuralları](CODE_OF_CONDUCT.md) · [Güvenlik](SECURITY.tr-TR.md) · [Teşekkürler](ACKNOWLEDGMENTS.tr-TR.md)*
 
-<!-- ![Genel Bakış](docs/images/overview.png) -->
-<!-- Bu görseli Prompts/image-prompts.md'deki "Image 1 — Overview" prompt'uyla üret, docs/images/overview.png'ye kaydet, sonra yukarıdaki satırı yorumdan çıkar. -->
+![Genel Bakış](docs/images/overview.png)
 
 </div>
 
@@ -93,8 +92,7 @@ MySQL, PostgreSQL, Firebird ve SQLite'ı tek bir yerden yönetin; doğal dilde S
 
 ## 🌟 Yapay Zekaya Öğretilen Ana Kurallar
 
-<!-- ![Temel Özellikler](docs/images/core-features.png) -->
-<!-- Bu görseli Prompts/image-prompts.md'deki "Image 2 — Core Features" prompt'uyla üret, docs/images/core-features.png'ye kaydet, sonra yukarıdaki satırı yorumdan çıkar. -->
+![Temel Özellikler](docs/images/core-features.png)
 
 ### 🧠 Sıfır-Leak Bellek Yönetimi
 
@@ -329,8 +327,7 @@ end;
 
 ## 🎯 Tasarım ve Felsefe
 
-<!-- ![Tasarım ve Felsefe](docs/images/design-philosophy.png) -->
-<!-- Bu görseli Prompts/image-prompts.md'deki "Image 3 — Design & Philosophy" prompt'uyla üret, docs/images/design-philosophy.png'ye kaydet, sonra yukarıdaki satırı yorumdan çıkar. -->
+![Tasarım ve Felsefe](docs/images/design-philosophy.png)
 
 **İnşa Yoluyla Sıfır-Leak.**
 
@@ -406,7 +403,7 @@ git push origin feat/add-remobjects-patterns
 |---|---|
 | `Sistemi analiz et` | Bu kit'in kendi sistem katmanını analiz eder (`.agents/skills/`, `.agents/rules/`, `.agents/commands/`, `AGENTS.md`, `.claude/CLAUDE.md`) — `examples/`, `docs/`, `src/`, `tools/` siz istemedikçe kapsam dışıdır. Rapor kit'in kendi `analysis/result/{ai}_v{n}.md` klasörüne düşer — yerel bir çalışma dosyasıdır, bilerek gitignore'lanmıştır; uygulanan düzeltmelerin kalıcı kaydı git geçmişi + issue'lar + CHANGELOG'dur. |
 | `Değerlendir` | `analysis/result/` içindeki mevcut raporları güncel içerikle karşılaştırıp not verir (`STILL_VALID`/`STALE`/`REFUTED`...), düzeltme listesini sunar ve onayınızı bekler. |
-| `Düzelt: <hedef>` | Onay-kapılı düzenleme: analiz → eski raporların değerlendirmesi → açık onayınız → düzenleme. Düzenlenen dosya paylaşılan gömülü bir skill (`rad-*`) veya `Prompts/system/` master'ı ise ve bu kit, üst AI-Spec-Kits-Maker workspace'inin içindeyse, aynı düzeltme üstteki master kopyaya da uygulanır — iki taraf hep güncel kalır. |
+| `Düzelt: <hedef>` | Onay-kapılı düzenleme: analiz → eski raporların değerlendirmesi → açık onayınız → düzenleme. Düzenlenen dosya paylaşılan gömülü bir skill (`rad-*`) ise ve bu kit, üst AI-Spec-Kits-Maker workspace'inin içindeyse, aynı düzeltme üstteki master kopyaya da uygulanır — iki taraf hep güncel kalır. |
 | `<konu> için skill var mı?` | Gömülü `rad-skill-finder` yerel → `npx skills` ekosistemi → dizinler → web sırasıyla arar; onayınız olmadan asla kurulum yapmaz. |
 
 ---

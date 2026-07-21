@@ -2,112 +2,100 @@
 
 Three banner images for this kit's `README.md` / `README.tr-TR.md`.
 Generate with any capable image model (Nano Banana Pro, Midjourney v7,
-Flux, GPT-Image, etc.), save as PNG under `docs/images/` (shrink
-oversized model output first with `tools/resize-images.bat`), then follow
-the placement instructions in `README.md`/`README.tr-TR.md`.
+Flux, GPT-Image, etc.) at a **wide 16:9 banner aspect ratio**, save as
+PNG under `docs/images/` (`overview.png`, `core-features.png`,
+`design-philosophy.png` — shrink oversized model output first with
+`tools/resize-images.bat`). The `README.md`/`README.tr-TR.md` image tags
+are already live; new pictures replace the old ones the moment the files
+land.
 
-**Golden rules, mascot concept, and structure:** see
-[`Prompts/system/image-generation-base-prompt.md`](system/image-generation-base-prompt.md) —
-this file only customizes it for this kit, it doesn't restate it.
+This file is **self-contained** — no shared base prompt exists anymore.
+Every spec-kit owns a completely distinct visual world; this kit must
+never reuse another kit's palette, central object, or metaphor.
 
-## This kit's customization
+## Art direction — "The Oracle's Flame"
 
-- **Mascot accessory:** a small flame-shaped accessory on its head or
-  chest (a nod to Delphi's classic red flame logo).
-- **Accent color:** deep red and burnt-orange, evoking Delphi's classic
-  red flame logo.
-- **Anchor object (mandatory in all three images):** a classic
-  RAD-Studio/Delphi-style IDE window — a rectangular window with a
-  blue-tinted title bar, a component-palette sidebar of small plain icon
-  tiles, a code-editor pane with glowing amber-red monospace lines
-  (illegible), and a property-inspector panel of plain two-column rows.
-  No factory/gear/pipe backdrop — a plain desk only.
-- **Shot variety (see base prompt Golden Rule 6):** vary shot type and
-  camera angle across the three images, not just the mascot's action —
-  same action with the same medium-shot framing three times still reads
-  as one repeated image.
+Delphi is named after the ancient sanctuary of Delphi, and its symbol has
+always been the flame. This kit's philosophy is *"Zero-Leak by
+Construction"* — nothing entrusted to the craftsman is ever lost. The
+imagery: **an ancient Greek temple world where a sacred flame burns with
+engineered precision**, rendered as epic painterly matte-paintings. No
+robots, no mascots, no computers — the metaphor carries everything.
 
-## Negative Prompt (mandatory baseline, Golden Rule 8)
+- **World:** the clifftop sanctuary of Delphi — marble columns, bronze
+  tripods, engraved stelae, mountain dusk.
+- **Palette:** moonlit white marble and dusk indigo-purple sky against a
+  single powerful red-orange flame (Delphi's classic flame red).
+- **Style:** epic painterly matte-painting, dramatic natural light,
+  volumetric fire glow, museum-quality detail.
+- **Consistency:** all three images share this same world and palette;
+  each uses a different shot type and camera angle.
 
-Paste this exactly into the negative-prompt field for all three images:
+## Negative Prompt (paste into every generation)
 
 ```
-text, letters, words, logos, watermark, low quality, blurry, distorted
-hands, extra limbs, scary or menacing robot, photorealistic human, generic
-stock art, different mascot design between images, factory background,
-gears, pipes, industrial machinery, sci-fi facility
+text, letters, readable words, logos, watermark, low quality, blurry,
+humans, faces, gods, statues of people, robots, mascots, cartoon style,
+computers, screens, keyboards, modern objects, daylight blue sky,
+different art style between images
 ```
 
-## Image 1 — Overview
+## Image 1 — Overview (`docs/images/overview.png`)
 
-**Slot:** top of `README.md`, right under the title/badges.
-**Shot:** wide establishing shot — mascot small-to-medium in frame, desk
-and surroundings visible.
+**Slot:** top of the README, under the title/badges.
+**Shot:** wide establishing shot from across the valley.
 
 **Prompt:**
 ```
-A wide establishing shot, charming illustration of a small builder-robot
-mascot (a compact, rounded robot with a small flame-shaped accessory on
-its head, glowing deep-red/burnt-orange joints on a dark graphite
-chassis) sitting at a plain desk seen from a slight side angle, both
-hands near a keyboard, facing a classic RAD-Studio/Delphi-style IDE
-window floating just above the desk — a rectangular window with a
-blue-tinted title bar, a component-palette sidebar of small plain icon
-tiles along one edge, a code-editor pane with glowing amber-red monospace
-lines (illegible, just code-like), and a property-inspector panel of
-plain two-column rows on the other side. Beside the window, a small
-glowing padlock/latch icon sits closed and secure, and a couple of folder
-icons with visible corner-folds sit stacked neatly. The whole scene —
-mascot, desk, and window — is visible with room around it. Plain dark
-graphite background, no machinery or factory elements, warm red-orange
-rim lighting. Cinematic wide composition, high production value, digital
-illustration, detailed.
+An epic wide matte-painting of the ancient sanctuary of Delphi on a
+mountain cliff at deep dusk: moonlit white marble columns of a circular
+temple, and at its center a bronze tripod holding one powerful,
+perfectly steady red-orange flame — the only warm light in the scene.
+Sparks rise from the flame high into the indigo-purple sky and settle
+into faint glowing constellations of abstract geometric glyphs, as if
+the fire itself is writing among the stars. A single eagle circles far
+above the temple. Mist in the valley below, dramatic scale, epic
+painterly matte-painting, volumetric fire glow, wide 16:9 banner
+composition, museum-quality detail.
 ```
 
-## Image 2 — Core Features
+## Image 2 — Core Features (`docs/images/core-features.png`)
 
-**Slot:** at the top of the "Key Guidelines Taught to AI" section.
-**Shot:** medium hero shot — mascot centered, facing the camera directly,
-noticeably closer than Image 1.
+**Slot:** top of the "Key Guidelines" / core-features section.
+**Shot:** medium symmetrical shot at altar height.
 
 **Prompt:**
 ```
-A medium hero shot, centered composition: the same small builder-robot
-mascot (flame-shaped head accessory, glowing deep-red/burnt-orange
-joints on a dark graphite chassis, consistent design with the other
-images in this set), facing directly toward the camera at chest height,
-the same classic RAD-Studio/Delphi-style IDE window (blue-tinted title
-bar, component-palette sidebar, code-editor pane, property-inspector
-panel) floating just behind one shoulder, presenting four distinct
-glowing icons floating between itself and the viewer: two interlocking
-geometric joints that never separate (zero-leak memory management); a
-set of modular connected platforms (SOLID/dependency injection); a
-pulsing circular feedback-loop icon (the TDD red-green-refactor cycle);
-and a stack of glowing rectangular platforms (layered clean
-architecture). Plain dark graphite background, no machinery or factory.
-Deep red and burnt-orange, each icon clearly distinct from its neighbors
-in silhouette. Cinematic, charming, digital illustration, detailed.
+A medium, perfectly symmetrical shot of an ancient bronze tripod brazier
+standing between two marble columns at dusk: its single red-orange flame
+divides into four calm, steady tongues of fire, and each tongue cradles
+a floating emblem forged of glowing bronze light — two interlocked
+solid rings that cannot separate (nothing acquired is ever lost), a
+balanced two-pan scale in perfect equilibrium (principled structure), a
+laurel wreath closed into a complete circle (proven and verified work),
+and a fluted column capital carrying weight (layered architecture).
+Moonlit marble surfaces, indigo dusk behind, the four emblems clearly
+distinct in silhouette and evenly spaced. Epic painterly matte-painting,
+volumetric fire glow, wide 16:9 banner composition, museum-quality
+detail.
 ```
 
-## Image 3 — Design & Philosophy: Zero-Leak by Construction
+## Image 3 — Design & Philosophy (`docs/images/design-philosophy.png`)
 
-**Slot:** at the top of the "Design & Philosophy" closing section.
-**Shot:** close-up, dramatic diagonal composition, low camera angle —
-noticeably tighter and more unusual framing than Images 1 and 2.
+**Slot:** top of the "Design & Philosophy" section.
+**Shot:** dramatic low-angle close-up, night.
 
 **Prompt:**
 ```
-A tight close-up shot from a low, slightly diagonal camera angle: the
-same small builder-robot mascot (flame-shaped head accessory, glowing
-deep-red/burnt-orange joints on a dark graphite chassis, consistent
-design with the other images in this set), its hands filling most of the
-frame, carefully and precisely snapping two glowing interlocking
-geometric joint-pieces together, checking closely that they lock with
-zero gap between them, a small satisfied glow radiating outward the
-instant they click into place — the same classic RAD-Studio/Delphi-style
-IDE window glowing softly out of focus in the background. Dramatic close
-framing, shallow depth of field. Plain dark graphite background, no
-machinery or factory, warm red-orange lighting, a strong sense of
-deliberate, careful construction. Cinematic, charming, digital
-illustration, detailed.
+A dramatic low-angle close-up at night: a freshly carved marble stele
+standing tall among weathered ancient ruins, its surface engraved with
+an immaculate, unbroken geometric pattern of interlocking channels that
+glow faintly red-orange from within — every joint of the pattern
+flawless, no channel left open, no line left unfinished. A bronze
+chisel and mallet rest at its base, work just completed. The sacred
+flame burns out of focus in the background, its light reflecting off
+the polished new marble while the old ruins stay dark — an old craft,
+still building things that outlast their builders. Indigo night sky,
+epic painterly matte-painting, volumetric fire glow, wide 16:9 banner
+composition, museum-quality detail.
 ```

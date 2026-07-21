@@ -1,107 +1,107 @@
 # AI Görsel Prompt'ları — README Banner'ları
 
 Bu kit'in `README.md` / `README.tr-TR.md`'si için üç banner görseli.
-Herhangi bir yetenekli görsel modeliyle üret (Nano Banana Pro, Midjourney
-v7, Flux, GPT-Image vb.), PNG olarak `docs/images/` altına kaydet (aşırı
-büyük çıktıyı önce `tools/resize-images.bat` ile küçült), sonra
-`README.md`/`README.tr-TR.md`'deki yerleştirme talimatlarını izle.
+Herhangi bir yetenekli görsel modeliyle (Nano Banana Pro, Midjourney v7,
+Flux, GPT-Image vb.) **geniş 16:9 banner oranında** üret, PNG olarak
+`docs/images/` altına kaydet (`overview.png`, `core-features.png`,
+`design-philosophy.png` — aşırı büyük çıktıyı önce
+`tools/resize-images.bat` ile küçült). `README.md`/`README.tr-TR.md`'deki
+görsel etiketleri zaten açık; dosyalar yerine iner inmez yeni resimler
+eskilerinin yerini alır.
 
-**Altın kurallar, maskot kavramı ve yapı:** bkz.
-[`Prompts/system/image-generation-base-prompt.tr-TR.md`](system/image-generation-base-prompt.tr-TR.md)
-— bu dosya sadece bunu bu kit için özelleştiriyor, tekrar yazmıyor.
+Bu dosya **kendi başına yeterlidir** — artık paylaşılan bir temel prompt
+yok. Her spec-kit tamamen kendine ait bir görsel dünyaya sahiptir; bu kit
+başka bir kitin paletini, merkez nesnesini veya metaforunu asla yeniden
+kullanmaz.
 
 > **Not:** Prompt metinlerinin kendisi bilinçli olarak İngilizce
 > bırakıldı — görsel üretim modelleri İngilizce'de daha tutarlı sonuç
 > veriyor.
 
-## Bu kit'in özelleştirmesi
+## Sanat yönetimi — "Kahin'in Alevi"
 
-- **Maskot aksesuarı:** kafasında veya göğsünde küçük bir alev-şeklinde
-  aksesuar (Delphi'nin klasik kırmızı alev logosuna gönderme).
-- **Aksan rengi:** koyu kırmızı ve yanık turuncu, Delphi'nin klasik
-  kırmızı alev logosunu çağrıştırır.
-- **Çapa nesnesi (üç görselde de zorunlu):** klasik bir RAD-Studio/
-  Delphi-tarzı IDE penceresi — mavimsi bir başlık çubuğu, düz ikon
-  karolarından bir bileşen-paleti kenar çubuğu, parlayan amber-kırmızı
-  monospace satırları olan bir kod-editörü paneli (okunaksız) ve düz
-  iki-sütunlu satırlardan bir özellik-inceleyici paneli olan dikdörtgen
-  bir pencere. Fabrika/dişli/boru arka planı yok — sadece sade bir masa.
-- **Çekim çeşitliliği (bkz. master prompt'un Altın Kural 6'sı):** üç
-  görselde sadece maskotun eylemini değil, çekim tipini ve kamera açısını
-  da değiştir — aynı eylem aynı orta-plan çerçevelemeyle üç kez tekrar
-  edilirse yine tek bir tekrarlanan görsel gibi okunur.
+Delphi adını antik Delphi tapınağından alır ve sembolü her zaman alev
+olmuştur. Bu kitin felsefesi *"Yapısı Gereği Sıfır-Sızıntı"*dır —
+ustaya emanet edilen hiçbir şey kaybolmaz. Görsel dil: **kutsal bir
+alevin mühendislik hassasiyetiyle yandığı antik Yunan tapınak dünyası**,
+epik ressamsı matte-painting olarak. Robot yok, maskot yok, bilgisayar
+yok — metaforu taşıyan her şey dünyanın kendisi.
 
-## Görsel 1 — Genel Bakış (Overview)
+- **Dünya:** Delphi'nin uçurum kenarındaki kutsal alanı — mermer
+  sütunlar, bronz sacayaklar, kazınmış steller, dağ alacakaranlığı.
+- **Palet:** ay ışığında beyaz mermer ve alacakaranlık indigo-mor
+  gökyüzüne karşı tek bir güçlü kırmızı-turuncu alev (Delphi'nin klasik
+  alev kırmızısı).
+- **Stil:** epik ressamsı matte-painting, dramatik doğal ışık, hacimsel
+  alev ışıması, müze kalitesinde detay.
+- **Tutarlılık:** üç görsel de aynı dünyayı ve paleti paylaşır; her biri
+  farklı çekim tipi ve kamera açısı kullanır.
 
-**Yer:** `README.md`'nin en üstü, başlık/rozetlerin hemen altı.
-**Çekim:** geniş kuruluş çekimi — maskot kadrajda küçük-orta boyutta,
-masa ve çevresi görünür.
+## Negatif Prompt (her üretime aynen yapıştır)
 
-**Prompt (İngilizce — değiştirmeyin):**
 ```
-A wide establishing shot, charming illustration of a small builder-robot
-mascot (a compact, rounded robot with a small flame-shaped accessory on
-its head, glowing deep-red/burnt-orange joints on a dark graphite
-chassis) sitting at a plain desk seen from a slight side angle, both
-hands near a keyboard, facing a classic RAD-Studio/Delphi-style IDE
-window floating just above the desk — a rectangular window with a
-blue-tinted title bar, a component-palette sidebar of small plain icon
-tiles along one edge, a code-editor pane with glowing amber-red monospace
-lines (illegible, just code-like), and a property-inspector panel of
-plain two-column rows on the other side. Beside the window, a small
-glowing padlock/latch icon sits closed and secure, and a couple of folder
-icons with visible corner-folds sit stacked neatly. The whole scene —
-mascot, desk, and window — is visible with room around it. Plain dark
-graphite background, no machinery or factory elements, warm red-orange
-rim lighting. Cinematic wide composition, high production value, digital
-illustration, detailed.
+text, letters, readable words, logos, watermark, low quality, blurry,
+humans, faces, gods, statues of people, robots, mascots, cartoon style,
+computers, screens, keyboards, modern objects, daylight blue sky,
+different art style between images
 ```
 
-## Görsel 2 — Temel Özellikler (Core Features)
+## Görsel 1 — Overview (`docs/images/overview.png`)
 
-**Yer:** "Key Guidelines Taught to AI" bölümünün en üstü.
-**Çekim:** orta hero çekimi — maskot ortalanmış, doğrudan kameraya
-bakıyor, Görsel 1'den belirgin şekilde daha yakın.
+**Yeri:** README'nin en üstü, başlık/rozetlerin altı.
+**Çekim:** vadinin karşısından geniş tanıtım planı.
 
-**Prompt (İngilizce — değiştirmeyin):**
+**Prompt:**
 ```
-A medium hero shot, centered composition: the same small builder-robot
-mascot (flame-shaped head accessory, glowing deep-red/burnt-orange
-joints on a dark graphite chassis, consistent design with the other
-images in this set), facing directly toward the camera at chest height,
-the same classic RAD-Studio/Delphi-style IDE window (blue-tinted title
-bar, component-palette sidebar, code-editor pane, property-inspector
-panel) floating just behind one shoulder, presenting four distinct
-glowing icons floating between itself and the viewer: two interlocking
-geometric joints that never separate (zero-leak memory management); a
-set of modular connected platforms (SOLID/dependency injection); a
-pulsing circular feedback-loop icon (the TDD red-green-refactor cycle);
-and a stack of glowing rectangular platforms (layered clean
-architecture). Plain dark graphite background, no machinery or factory.
-Deep red and burnt-orange, each icon clearly distinct from its neighbors
-in silhouette. Cinematic, charming, digital illustration, detailed.
+An epic wide matte-painting of the ancient sanctuary of Delphi on a
+mountain cliff at deep dusk: moonlit white marble columns of a circular
+temple, and at its center a bronze tripod holding one powerful,
+perfectly steady red-orange flame — the only warm light in the scene.
+Sparks rise from the flame high into the indigo-purple sky and settle
+into faint glowing constellations of abstract geometric glyphs, as if
+the fire itself is writing among the stars. A single eagle circles far
+above the temple. Mist in the valley below, dramatic scale, epic
+painterly matte-painting, volumetric fire glow, wide 16:9 banner
+composition, museum-quality detail.
 ```
 
-## Görsel 3 — Tasarım ve Felsefe: Zero-Leak by Construction
+## Görsel 2 — Core Features (`docs/images/core-features.png`)
 
-**Yer:** "Design & Philosophy" kapanış bölümünün en üstü.
-**Çekim:** yakın çekim, dramatik diyagonal kompozisyon, alçak kamera
-açısı — Görsel 1 ve 2'den belirgin şekilde daha sıkı ve daha alışılmadık
-bir çerçeveleme.
+**Yeri:** "Temel İlkeler" bölümünün başı.
+**Çekim:** sunak yüksekliğinden orta, simetrik plan.
 
-**Prompt (İngilizce — değiştirmeyin):**
+**Prompt:**
 ```
-A tight close-up shot from a low, slightly diagonal camera angle: the
-same small builder-robot mascot (flame-shaped head accessory, glowing
-deep-red/burnt-orange joints on a dark graphite chassis, consistent
-design with the other images in this set), its hands filling most of the
-frame, carefully and precisely snapping two glowing interlocking
-geometric joint-pieces together, checking closely that they lock with
-zero gap between them, a small satisfied glow radiating outward the
-instant they click into place — the same classic RAD-Studio/Delphi-style
-IDE window glowing softly out of focus in the background. Dramatic close
-framing, shallow depth of field. Plain dark graphite background, no
-machinery or factory, warm red-orange lighting, a strong sense of
-deliberate, careful construction. Cinematic, charming, digital
-illustration, detailed.
+A medium, perfectly symmetrical shot of an ancient bronze tripod brazier
+standing between two marble columns at dusk: its single red-orange flame
+divides into four calm, steady tongues of fire, and each tongue cradles
+a floating emblem forged of glowing bronze light — two interlocked
+solid rings that cannot separate (nothing acquired is ever lost), a
+balanced two-pan scale in perfect equilibrium (principled structure), a
+laurel wreath closed into a complete circle (proven and verified work),
+and a fluted column capital carrying weight (layered architecture).
+Moonlit marble surfaces, indigo dusk behind, the four emblems clearly
+distinct in silhouette and evenly spaced. Epic painterly matte-painting,
+volumetric fire glow, wide 16:9 banner composition, museum-quality
+detail.
+```
+
+## Görsel 3 — Design & Philosophy (`docs/images/design-philosophy.png`)
+
+**Yeri:** "Tasarım & Felsefe" bölümünün başı.
+**Çekim:** dramatik alçak açılı yakın plan, gece.
+
+**Prompt:**
+```
+A dramatic low-angle close-up at night: a freshly carved marble stele
+standing tall among weathered ancient ruins, its surface engraved with
+an immaculate, unbroken geometric pattern of interlocking channels that
+glow faintly red-orange from within — every joint of the pattern
+flawless, no channel left open, no line left unfinished. A bronze
+chisel and mallet rest at its base, work just completed. The sacred
+flame burns out of focus in the background, its light reflecting off
+the polished new marble while the old ruins stay dark — an old craft,
+still building things that outlast their builders. Indigo night sky,
+epic painterly matte-painting, volumetric fire glow, wide 16:9 banner
+composition, museum-quality detail.
 ```
