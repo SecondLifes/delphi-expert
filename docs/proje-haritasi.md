@@ -24,6 +24,7 @@ Kuralların, komutların ve becerilerin (skills) **gerçek içeriği sadece `.ag
 |---|---|
 | `AGENTS.md` | Codex CLI, Cursor, GitHub Copilot, Gemini/Antigravity ve Kiro'nun **doğrudan okuduğu** evrensel kural özeti — Identity, Skill Check, Working Directory, Proactive Quality Suggestions bölümleri dahil. Detay için `.agents/rules/*.md`'ye yönlendirir. **Elle yazılır, script'ten üretilmez.** |
 | `README.md` / `README.tr-TR.md` | İnsan okuyucu için proje tanıtımı, kurulum (Quick Start), kit yapısının genel görünümü — paralel İngilizce/Türkçe çift, aynı "Delphi AI Spec-Kit" başlığı. |
+| `settings.json` | Bu kitin kendi çalışma-zamanı ayarları — commit'lenir. Şu an sadece `versioning.current_version` (semver) tutuyor; şema `.agents/rules/kit-settings.md`'de. |
 | `LICENSE` | MIT lisansı, telif hakkı sahibi `Delphi Clean Code` — **elle değiştirilmez.** Bu kit [delphicleancode/delphi-spec-kit](https://github.com/delphicleancode/delphi-spec-kit)'in bir fork'udur; orijinal lisans ve telif hakkı korunur (bkz. `CONTRIBUTING.md`'nin "Provenance" bölümü). Diğer workspace kitlerinden (`batch-script-expert`, `prompt-analyzer-expert`) farklı olarak Apache-2.0'a çevrilmedi — bu kasıtlı bir istisna. |
 | `CODE_OF_CONDUCT.md` | Contributor Covenant v1.4 — Türkçe çevirisi kasıtlı olarak yok. |
 | `CONTRIBUTING.md` / `CONTRIBUTING.tr-TR.md` | "Contributing to Delphi AI Spec-Kit" — hata bildirimi, PR süreci, teknik standartlar, fork kökeni notu. |
@@ -41,6 +42,8 @@ Bu klasör kitin **kalbi**dir. Yeni bir kural/komut/skill eklerken/düzenlerken 
 | Dosya | Konu |
 |---|---|
 | `sync-workflow.md` | **Önce bunu oku.** Bu mimarinin nasıl çalıştığı, `.agents` değişince ne yapılması gerektiği. |
+| `kit-settings.md` | Kit kökündeki `settings.json`'ın şeması ve kullanım kuralları (versiyon bilgisi, Golden Rule 7'nin etiketleme adımı buradan okur/yazar). |
+| `local-machine-registry.md` | Bu makineye özel `%USERPROFILE%.radsettings.json` kaydı — kurulu kütüphane kaynak yollarını okuyup gerçek kaynağı tahmin yerine doğrudan okuma kuralı. |
 | `delphi-conventions.md` | PascalCase, T/I/E/F/A/L prefix'leri, unit bölümleri, formatlama. |
 | `memory-exceptions.md` | try/finally zorunluluğu, Interface/ARC, exception yakalama disiplini. |
 | `solid-patterns.md` | SOLID prensipleri + Repository/Service kurulum şablonu. |
