@@ -43,7 +43,7 @@ Bu klasör kitin **kalbi**dir. Yeni bir kural/komut/skill eklerken/düzenlerken 
 |---|---|
 | `sync-workflow.md` | **Önce bunu oku.** Bu mimarinin nasıl çalıştığı, `.agents` değişince ne yapılması gerektiği. |
 | `kit-settings.md` | Kit kökündeki `settings.json`'ın şeması ve kullanım kuralları (versiyon bilgisi, Golden Rule 7'nin etiketleme adımı buradan okur/yazar). |
-| `local-machine-registry.md` | Bu makineye özel `%USERPROFILE%.radsettings.json` kaydı — kurulu kütüphane kaynak yollarını okuyup gerçek kaynağı tahmin yerine doğrudan okuma kuralı. |
+| `local-machine-registry.md` | İki katmanlı `.rad` hub'ı: **sistem root** (`%ProgramData%\rad` — makine geneli, tüm kullanıcılar: `registry.json`, ortak kurallar, ortak skill'ler) + **kullanıcı root** (`%USERPROFILE%\.rad` — kişisel: `settings.json`, `analysis\`). Başka bir kite `settings.json`'daki `references` ile ad üzerinden referans verme (yol asla hardcode edilmez), ortak kuralları canlı okuma, ve kurulu kütüphane kaynağını tahmin yerine doğrudan okuma kuralları burada. |
 | `delphi-conventions.md` | PascalCase, T/I/E/F/A/L prefix'leri, unit bölümleri, formatlama. |
 | `memory-exceptions.md` | try/finally zorunluluğu, Interface/ARC, exception yakalama disiplini. |
 | `solid-patterns.md` | SOLID prensipleri + Repository/Service kurulum şablonu. |
@@ -133,6 +133,7 @@ Bu klasörlerin çoğu **üretilmiş** (generated) içerik barındırır — kay
 
 | Dosya | Ne işe yarar |
 |---|---|
+| `rad-register.ps1` | Bu kiti makine-geneli `.rad` registry'sine (`%ProgramData%\rad\registry.json`) kaydeder — başka kitler bu kite **yol yerine ad** ile referans verebilsin diye. Yönetici yetkisi gerektirmez: klasörü ilk oluşturan `CREATOR OWNER` üzerinden tam yetki aldığı için ACL'i (`Users → Modify`) kendisi ayarlar; bu adım olmazsa ProgramData'nın varsayılan izinleri yüzünden **ikinci kullanıcı** dosyayı yazamaz. Yazma kilitli + atomik (temp dosya + rename). `-Name` ile farklı ad, `-Unregister` ile kayıt silme. Kit taşınınca/yeniden klonlanınca tekrar çalıştırılmalı. |
 | `generate-ai-configs.ps1` | `.agents/rules` ve `.agents/commands`'ı okuyup `.claude/rules`, `.cursor/rules`, `.claude/commands`'a kopyalayan PowerShell script. Ayrıca `.agents/skills/*` altındaki her klasör için `.claude/commands/<skill-adı>.md` adında ince bir komut sarmalayıcısı üretir (skill'i `/<skill-adı>` ile doğrudan, adım sırasını bozmadan çağırabilmek için) — isim bir hand-authored komutla çakışırsa o skill için üretim atlanır ve uyarı basılır. `.agents/rules`, `.agents/commands` altında bir dosya eklenip/silinip/değiştirildiğinde VEYA `.agents/skills` altına bir skill eklenip/kaldırıldığında çalıştırılması **zorunludur** (bkz. `sync-workflow.md`). |
 
 ## `docs/`
