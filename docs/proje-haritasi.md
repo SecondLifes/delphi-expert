@@ -43,7 +43,7 @@ Bu klasör kitin **kalbi**dir. Yeni bir kural/komut/skill eklerken/düzenlerken 
 |---|---|
 | `sync-workflow.md` | **Önce bunu oku.** Bu mimarinin nasıl çalıştığı, `.agents` değişince ne yapılması gerektiği. |
 | `kit-settings.md` | Kit kökündeki `settings.json`'ın şeması ve kullanım kuralları (versiyon bilgisi, Golden Rule 7'nin etiketleme adımı buradan okur/yazar). |
-| `local-machine-registry.md` | İki katmanlı `.rad` hub'ı: **sistem root** (`%ProgramData%\rad` — makine geneli, tüm kullanıcılar: `registry.json`, ortak kurallar, ortak skill'ler) + **kullanıcı root** (`%USERPROFILE%\.rad` — kişisel: `settings.json`, `analysis\`). Başka bir kite `settings.json`'daki `references` ile ad üzerinden referans verme (yol asla hardcode edilmez), ortak kuralları canlı okuma, ve kurulu kütüphane kaynağını tahmin yerine doğrudan okuma kuralları burada. |
+| `local-machine-registry.md` | Tek, makine geneli `.rad` hub'ı (`%ProgramData%\rad`): `registry.json`, ortak kurallar, ortak skill'ler, `settings.json` ve `analysis\` hepsi ayni kokte (eski sistem/kullanici ayrimi kaldirildi). Baska bir kite `settings.json`'daki `references` ile ad uzerinden referans verme (yol asla hardcode edilmez), ortak kurallari canli okuma, ve kurulu kutuphane kaynagini tahmin yerine dogrudan okuma kurallari burada. |
 | `delphi-conventions.md` | PascalCase, T/I/E/F/A/L prefix'leri, unit bölümleri, formatlama. |
 | `memory-exceptions.md` | try/finally zorunluluğu, Interface/ARC, exception yakalama disiplini. |
 | `solid-patterns.md` | SOLID prensipleri + Repository/Service kurulum şablonu. |
