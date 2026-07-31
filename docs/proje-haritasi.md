@@ -133,7 +133,7 @@ Bu klasörlerin çoğu **üretilmiş** (generated) içerik barındırır — kay
 
 | Dosya | Ne işe yarar |
 |---|---|
-| `rad-register.ps1` | Bu kiti makine-geneli `.rad` registry'sine (`%ProgramData%\rad\registry.json`) kaydeder — başka kitler bu kite **yol yerine ad** ile referans verebilsin diye. Yönetici yetkisi gerektirmez: klasörü ilk oluşturan `CREATOR OWNER` üzerinden tam yetki aldığı için ACL'i (`Users → Modify`) kendisi ayarlar; bu adım olmazsa ProgramData'nın varsayılan izinleri yüzünden **ikinci kullanıcı** dosyayı yazamaz. Yazma kilitli + atomik (temp dosya + rename). `-Name` ile farklı ad, `-Unregister` ile kayıt silme. Kit taşınınca/yeniden klonlanınca tekrar çalıştırılmalı. |
+| `register.bat` | Bu kiti makine-geneli `.rad` registry'sine kaydeder — kendi kayıt mantığını taşımaz, sadece hub kökündeki symlink üzerinden workspace'in kendi `rad.ps1`'ini `-Action Register` ile çağırır. Hub kurulu değilse sadece "Hub kurulu değil." der, durur. `-Name` ile farklı ad, `-Unregister` ile kayıt silme. Kit taşınınca/yeniden klonlanınca tekrar çalıştırılmalı. |
 | `generate-ai-configs.ps1` | `.agents/rules` ve `.agents/commands`'ı okuyup `.claude/rules`, `.cursor/rules`, `.claude/commands`'a kopyalayan PowerShell script. Ayrıca `.agents/skills/*` altındaki her klasör için `.claude/commands/<skill-adı>.md` adında ince bir komut sarmalayıcısı üretir (skill'i `/<skill-adı>` ile doğrudan, adım sırasını bozmadan çağırabilmek için) — isim bir hand-authored komutla çakışırsa o skill için üretim atlanır ve uyarı basılır. `.agents/rules`, `.agents/commands` altında bir dosya eklenip/silinip/değiştirildiğinde VEYA `.agents/skills` altına bir skill eklenip/kaldırıldığında çalıştırılması **zorunludur** (bkz. `sync-workflow.md`). |
 
 ## `docs/`

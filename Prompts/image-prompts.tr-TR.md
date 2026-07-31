@@ -5,7 +5,7 @@ Herhangi bir yetenekli görsel modeliyle (Nano Banana Pro, Midjourney v7,
 Flux, GPT-Image vb.) **geniş 16:9 banner oranında** üret, PNG olarak
 `docs/images/` altına kaydet (`overview.png`, `core-features.png`,
 `design-philosophy.png` — aşırı büyük çıktıyı önce
-`tools/resize-images.bat` ile küçült). `README.md`/`README.tr-TR.md`'deki
+kit içinde bu işe özel bir script bulunmaz, elindeki herhangi bir görsel aracını kullan). `README.md`/`README.tr-TR.md`'deki
 görsel etiketleri zaten açık; dosyalar yerine iner inmez yeni resimler
 eskilerinin yerini alır.
 
