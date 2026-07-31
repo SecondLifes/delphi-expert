@@ -195,8 +195,8 @@ delphi-spec-kit/
 │                                     # Cursor, Codex CLI, Copilot ve Gemini/Antigravity tarafından
 │                                     # doğrudan okunur; 22 Delphi-özgü skill + 6 genel-amaçlı
 │                                     # skill (rad-repo-scaffold, rad-prompt-studio,
-│                                     # rad-skill-finder, rad-python, rad-web-scraping,
-│                                     # rad-powershell-master)
+│                                     # rad-skill-finder, python, rad-web-scraping,
+│                                     # powershell-master)
 │
 ├── tools/
 │   └── generate-ai-configs.ps1      # .claude/rules, .cursor/rules, .claude/commands'ı

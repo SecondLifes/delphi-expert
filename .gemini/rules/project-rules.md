@@ -127,6 +127,6 @@ Consult specific skills for each framework:
 - **Rad Repo Scaffold:** `.agents/skills/rad-repo-scaffold/SKILL.md` — Purpose-fit AI repository structure
 - **Rad Prompt Studio:** `.agents/skills/rad-prompt-studio/SKILL.md` — Design/Analyze/Edit AI prompts, rules and skills (five-lens methodology, edit gated behind mandatory analysis/evaluation + user approval)
 - **Rad Skill Finder:** `.agents/skills/rad-skill-finder/SKILL.md` — Checks for an existing skill before writing a capability from scratch
-- **Rad Python:** `.agents/skills/rad-python/SKILL.md` — Helper/one-off scripting when a task needs it
+- **Rad Python:** `.agents/skills/python/SKILL.md` — Helper/one-off scripting when a task needs it
 - **Rad Web Scraping:** `.agents/skills/rad-web-scraping/SKILL.md` — Structured data extraction from the web
-- **Rad PowerShell Master:** `.agents/skills/rad-powershell-master/SKILL.md` — PowerShell 7+ scripts/modules/cmdlets, CI/CD, cross-platform (relevant to this kit's own `tools/generate-ai-configs.ps1`)
+- **Rad PowerShell Master:** `.agents/skills/powershell-master/SKILL.md` — PowerShell 7+ scripts/modules/cmdlets, CI/CD, cross-platform (relevant to this kit's own `tools/generate-ai-configs.ps1`)

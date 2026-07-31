@@ -25,7 +25,7 @@ What changed:
   `README.tr-TR.md`, `docs/proje-haritasi.md`, `docs/ai-ignore-strategy.md`).
 - Replaced `.agents/skills/rad-prompter/` (an early, unmaintained ancestor
   of this workspace's `rad-prompt-engineer`) with the current
-  `rad-prompt-engineer` bundle, plus `rad-skill-finder`, `rad-python`, and
+  `rad-prompt-engineer` bundle, plus `rad-skill-finder`, `python`, and
   `rad-web-scraping` — the same four-skill bundle every `spec-kits/*`
   template built from `blank-scaffold` now ships. `rad-repo-scaffold` and
   all 20 Delphi/framework-specific skills were left untouched, per explicit
@@ -98,7 +98,7 @@ What changed:
   `batch-script-expert`'s original copy, this kit's settings.json was
   never Delphi-*inappropriate*, so nothing needed removing here.
 - Confirmed none of the four newly bundled skills (`rad-prompt-engineer`,
-  `rad-skill-finder`, `rad-python`, `rad-web-scraping`) carry a hardcoded
+  `rad-skill-finder`, `python`, `rad-web-scraping`) carry a hardcoded
   `E:\system\dev\AI` or `E:/system/dev/AI` absolute path — grepped all
   four folders, zero matches, consistent with them being the already-
   verified-portable variants from `blank-scaffold`.
@@ -139,18 +139,18 @@ What changed:
   migration — their own `SKILL.md` frontmatter was not touched, so
   whatever trigger precision they already had is preserved as-is.
 
-## Addendum — rad-powershell-master added (same day, follow-up request)
+## Addendum — powershell-master added (same day, follow-up request)
 
-The user asked to also bundle `rad-powershell-master` (source:
+The user asked to also bundle `powershell-master` (source:
 `josiahsiegel/claude-plugin-marketplace`, upstream name
 `powershell-master`) — not part of `blank-scaffold`'s default 4-skill
 bundle, added specifically for this kit. Copied as-is from the
-workspace's own `.agents/skills/rad-powershell-master/` (grepped for
+workspace's own `.agents/skills/powershell-master/` (grepped for
 hardcoded `E:\system\dev\AI` paths first — none found, unlike some
 earlier workspace-tooling files that needed cleanup before being
 portable). Skill count is now 28 (22 Delphi-specific + 6 general-purpose:
 `rad-repo-scaffold`, `rad-prompt-engineer`, `rad-skill-finder`,
-`rad-python`, `rad-web-scraping`, `rad-powershell-master`) —
+`python`, `rad-web-scraping`, `powershell-master`) —
 `docs/proje-haritasi.md`, `README.md`, `README.tr-TR.md`, and
 `.gemini/rules/project-rules.md` all updated to match. Re-ran
 `tools/generate-ai-configs.ps1` twice: once produced a coverage
@@ -163,7 +163,7 @@ not silently ignored), the second run after fixing
 **Migration complete for its stated, user-confirmed scope**: structural
 parity (Identity/Skill Check/Working Directory/Proactive Quality
 Suggestions, bilingual root docs, `src/`, the standard 5-skill bundle
-including `rad-powershell-master`, fixed generator script) reached
+including `powershell-master`, fixed generator script) reached
 without touching the 20 Delphi-specific skills, `rad-repo-scaffold`, or
 the original MIT license/copyright — all verified by direct inspection
 (`diff`, `grep`, actually re-running the generator script) rather than

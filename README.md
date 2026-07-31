@@ -236,9 +236,9 @@ delphi-spec-kit/
 │       ├── rad-repo-scaffold/       # Bootstrap a purpose-fit AI-ready repo structure
 │       ├── rad-prompt-studio/       # Design/Analyze/Edit AI prompts, rules and skills — five-lens methodology
 │       ├── rad-skill-finder/        # Checks for an existing skill before writing a capability from scratch
-│       ├── rad-python/              # Helper/one-off scripting when a task needs it
+│       ├── python/              # Helper/one-off scripting when a task needs it
 │       ├── rad-web-scraping/        # Structured data extraction from the web
-│       └── rad-powershell-master/   # PowerShell 7+ expertise — scripts, modules, CI/CD, cross-platform
+│       └── powershell-master/   # PowerShell 7+ expertise — scripts, modules, CI/CD, cross-platform
 │
 ├── tools/
 │   └── generate-ai-configs.ps1      # Regenerates .claude/rules, .cursor/rules, .claude/commands
