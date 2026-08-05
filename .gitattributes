@@ -15,3 +15,4 @@ Libraries/** linguist-vendored
 Vendor/** linguist-vendored
 tools/generate-ai-configs.ps1 linguist-vendored
 .agents/skills/rad-repo-scaffold/scripts/apply_structure.py linguist-vendored
+.serena
