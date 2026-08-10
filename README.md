@@ -219,7 +219,8 @@ delphi-spec-kit/
 │       ├── refactoring/             # Refactoring (10 techniques, before/after)
 │       ├── tdd-dunitx/              # TDD with DUnitX
 │       ├── horse-framework/         # Horse REST API
-│       ├── dmvc-framework/          # DelphiMVC Framework
+│       ├── dmvcframework/           # DelphiMVCFramework — core, +5 focused companions
+│       ├── htmx-skill/              # htmx reference for the DMVC web/UI skills
 │       ├── dext-framework/          # Dext Framework
 │       ├── delphi-http-client/      # Consuming HTTP/REST APIs (THTTPClient, TRESTClient)
 │       ├── intraweb-framework/      # Intraweb WebApps

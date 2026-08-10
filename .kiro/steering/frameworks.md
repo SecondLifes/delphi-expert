@@ -19,7 +19,7 @@ This spec-kit supports three popular frameworks from the Delphi ecosystem. The c
 - **Style:** MVC complete with annotations/attributes
 - **Features:** Active Record, RQL, built-in JWT, automatic serialization, Swagger
 - **Installation:** Repository clone + search paths
-- **Skills:** `.agents/skills/dmvc-framework/SKILL.md`
+- **Skills:** `.agents/skills/dmvcframework/SKILL.md` plus the focused companions `dmvcframework-minimal-api`, `-webapp`, `-ui`, `-security`, `-testing`; `htmx-skill` for the hypermedia front end
 - **Rules:** `.cursor/rules/dmvc-patterns.md`
 
 ### Dext Framework (Minimal APIs & ORM)

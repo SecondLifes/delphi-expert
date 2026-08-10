@@ -82,7 +82,17 @@ Skill'ler, rules'tan farklı olarak **otomatik yüklenmez** — AI, konuyla ilgi
 | `tdd-dunitx` | TDD akışı + Fake/Mock yazma disiplini. |
 | `dunitx-testing` | DUnitX proje yapısı, fixture, assertion referansı. |
 | `code-review` | Kod inceleme kontrol listesi (güvenlik, performans, SOLID, bellek). |
-| `horse-framework`, `dmvc-framework`, `dext-framework` | İlgili REST framework'ün derinlemesine kullanım rehberi. |
+| `horse-framework`, `dext-framework` | İlgili REST framework'ün derinlemesine kullanım rehberi. |
+| `dmvcframework` | DelphiMVCFramework çekirdeği (~2.400 satır): engine bootstrap/sunucu backend'leri, controller'lar, ActiveRecord, serileştirme, DI/repository, doğrulama. Bu ailenin giriş noktası. |
+| `dmvcframework-minimal-api` | Controller sınıfı olmadan lambda/anonim-metot route'lar — route grupları, `Prefix`/`MapGet` tarzı tanımlar. |
+| `dmvcframework-webapp` | Sunucu taraflı web uygulaması: TemplatePro şablon motoru (kalıtım, blok, filtre), sayfa akışları. |
+| `dmvcframework-ui` | Wizard'ın ürettiği sunum katmanı: Bootstrap 5.3, `baselayout.html`, stil düzeni. |
+| `dmvcframework-security` | DMVC uçları için güvenli kodlama referansı — IDOR, yetkilendirme, girdi doğrulama. |
+| `dmvcframework-testing` | In-process `IMVCServer` + `IMVCRESTClient` + DUnitX ile entegrasyon testi. |
+| `htmx-skill` | htmx.org resmi dokümantasyon indeksi — `dmvcframework-ui`/`-webapp` ile birlikte kullanılır. |
+
+> **Köken:** yukarıdaki yedi skill (toplam ~5.300 satır) 2026-08-10'da `delphi-library-expert`'ten devralındı. DMVC bir **web uygulama framework'ü** — kütüphane/component kitinin konusu değil; oradaki varlığı yanlış yerleştirmeydi. Bu kitin daha önceki tek `dmvc-framework` skill'i (319 satır) bunlarla değiştirildi: yeni set aynı konuları (ActiveRecord, JWT, RQL, WebModule, controller) çok daha derin kapsıyor, taşımadan önce dosya dosya doğrulandı. |
+| `htmx-skill` | htmx.org resmi dokümantasyon indeksi — `dmvcframework-ui`/`-webapp` ile birlikte kullanılır. |
 | `delphi-http-client` | HTTP/REST API tüketimi — THTTPClient/TNetHTTPClient/TRESTClient seçimi, timeout/bellek/status disiplini, JSON, async, retry desenleri (`references/consumption-patterns.md`). Sistem analizinin doğruladığı boşluğu kapatmak için sıfırdan yazıldı (DocWiki doğrulamalı). |
 | `intraweb-framework`, `devexpress-components` | İlgili kütüphane/framework'ün derinlemesine kullanım rehberi. (`acbr-components` skill'i `.agents/rules/acbr-patterns.md`'ye birleştirildi — tek kaynak artık kural dosyası.) |
 | `firebird-database`, `postgresql-database`, `mysql-database` | İlgili veritabanının FireDAC ile derinlemesine kullanımı (bağlantı, migration, hata kodları). |

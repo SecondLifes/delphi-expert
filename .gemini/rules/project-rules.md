@@ -104,7 +104,7 @@ Rule: `Presentation → Application → Domain ← Infrastructure`
 Consult specific skills for each framework:
 
 - **Horse:** `.agents/skills/horse-framework/SKILL.md` — Minimalist (Express-like) REST APIs
-- **DMVC:** `.agents/skills/dmvc-framework/SKILL.md` — Full-featured REST APIs with Active Record
+- **DMVC:** `.agents/skills/dmvcframework/SKILL.md` (+ `-minimal-api`, `-webapp`, `-ui`, `-security`, `-testing`) — REST APIs, server-side web apps, ActiveRecord, JWT, RQL
 - **Dext Framework:** `.agents/skills/dext-framework/SKILL.md` — Enterprise APIs with DI, ORM and Minimal APIs (.NET-like)
 - **Intraweb:** `.agents/skills/intraweb-framework/SKILL.md` — Stateful web development (VCL for the Web)
 - **ACBr:** `.agents/rules/acbr-patterns.md` — Tax Libraries/Commercial Automation (rules file is the single source; the former acbr-components skill was merged into it)
