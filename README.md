@@ -210,8 +210,8 @@ delphi-spec-kit/
 │   │   └── threading-patterns.md    # Threading (TThread, TTask, Synchronize/Queue)
 │   ├── commands/
 │   │   └── review.md                # Slash-command source: /review
-│   └── skills/                      # On-demand skills (SKILL.md per folder) — read natively by
-│       │                            # Claude Code, Cursor, Codex CLI, Copilot and Gemini/Antigravity
+│   └── skills/                      # On-demand skills (SKILL.md per folder) — the only editable copy;
+│       │                            # Claude Code reaches them via generated .claude/skills/ links
 │       ├── clean-code/              # Clean Code and Pascal Guide
 │       ├── delphi-memory-exceptions/# Memory management and try..finally
 │       ├── delphi-patterns/         # Repository, Service, Factory
@@ -461,7 +461,7 @@ commercial tools, and references this kit was built on.
 Pull Requests are welcome! If your favorite Delphi framework or library needs a guide for AI, add:
 
 1. **Rule** → `.agents/rules/your-framework.md`, then run `pwsh tools/generate-ai-configs.ps1` to regenerate `.claude/rules/` and `.cursor/rules/` — do **not** hand-edit those two folders directly, your change will be overwritten on the next run.
-2. **Skill** → `.agents/skills/your-framework/SKILL.md` (one copy, read natively by every supported tool — no content to regenerate, but run `pwsh tools/generate-ai-configs.ps1` afterward so Claude Code also gets the matching `/your-framework` command wrapper).
+2. **Skill** → `.agents/skills/your-framework/SKILL.md` (one copy, the only place it is ever edited — no content to regenerate, but run `pwsh tools/generate-ai-configs.ps1` afterward so Claude Code also gets the matching `/your-framework` command wrapper).
 3. **Reference** → mention it in `AGENTS.md` (and `.gemini/rules/project-rules.md` if it's framework/database-specific, matching the existing entries).
 
 ### How to contribute

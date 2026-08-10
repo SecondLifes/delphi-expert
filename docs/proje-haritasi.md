@@ -23,6 +23,7 @@ Kuralların, komutların ve becerilerin (skills) **gerçek içeriği sadece `.ag
 | Dosya | Ne işe yarar |
 |---|---|
 | `AGENTS.md` | Codex CLI, Cursor, GitHub Copilot, Gemini/Antigravity ve Kiro'nun **doğrudan okuduğu** evrensel kural özeti — Identity, Skill Check, Working Directory, Proactive Quality Suggestions bölümleri dahil. Detay için `.agents/rules/*.md`'ye yönlendirir. **Elle yazılır, script'ten üretilmez.** |
+| `GEMINI.md` | Gemini CLI'ın giriş noktası. Gemini CLI bağlamını `GEMINI.md` hiyerarşisinden kurar — `.gemini/rules/project-rules.md`'yi kendiliğinden **okumaz**. Bu dosya içerik çoğaltmaz, `@./.gemini/rules/project-rules.md` ile onu import eder; böylece o dosya düzenlendiği tek yer olarak kalır. |
 | `README.md` / `README.tr-TR.md` | İnsan okuyucu için proje tanıtımı, kurulum (Quick Start), kit yapısının genel görünümü — paralel İngilizce/Türkçe çift, aynı "Delphi AI Spec-Kit" başlığı. |
 | `settings.json` | Bu kitin kendi çalışma-zamanı ayarları — commit'lenir. Şu an sadece `versioning.current_version` (semver) tutuyor; şema `.agents/rules/kit-settings.md`'de. |
 | `LICENSE` | MIT lisansı, telif hakkı sahibi `Delphi Clean Code` — **elle değiştirilmez.** Bu kit [delphicleancode/delphi-spec-kit](https://github.com/delphicleancode/delphi-spec-kit)'in bir fork'udur; orijinal lisans ve telif hakkı korunur (bkz. `CONTRIBUTING.md`'nin "Provenance" bölümü). Diğer workspace kitlerinden (`batch-script-expert`, `prompt-analyzer-expert`) farklı olarak Apache-2.0'a çevrilmedi — bu kasıtlı bir istisna. |
@@ -43,6 +44,7 @@ Bu klasör kitin **kalbi**dir. Yeni bir kural/komut/skill eklerken/düzenlerken 
 |---|---|
 | `sync-workflow.md` | **Önce bunu oku.** Bu mimarinin nasıl çalıştığı, `.agents` değişince ne yapılması gerektiği. |
 | `kit-settings.md` | Kit kökündeki `settings.json`'ın şeması ve kullanım kuralları (versiyon bilgisi, Golden Rule 7'nin etiketleme adımı buradan okur/yazar). |
+| `analysis-output.md` | Bundle'lanmış `rad-prompt-studio`'nun üç master prompt'unun ortak girdi-çözümleme ve çıktı-adlandırma kuralı: hedef nasıl belirlenir, rapor nereye hangi adla yazılır (`%ProgramData%\rad\analysis\{repo}\{hedef}\{ai}_v{n}.md`), ve düzeltilen bulguların raporu ne zaman silinir. Bu dosya olmadan üç prompt da çıktı yolunu çözemez. |
 | `local-machine-registry.md` | Tek, makine geneli `.rad` hub'ı (`%ProgramData%\rad`): tek bir `settings.json` (root + kits + kisisel ayarlar birlikte), ortak kurallar/skiller/analiz hepsi workspace'in kendi `share\` klasorune canli link. Baska bir kite kendi `settings.json`'daki `references` ile ad uzerinden referans verme (yol asla hardcode edilmez), ortak kurallari canli okuma, ve kurulu kutuphane kaynagini tahmin yerine dogrudan okuma kurallari burada. |
 | `delphi-conventions.md` | PascalCase, T/I/E/F/A/L prefix'leri, unit bölümleri, formatlama. |
 | `memory-exceptions.md` | try/finally zorunluluğu, Interface/ARC, exception yakalama disiplini. |
@@ -130,6 +132,7 @@ Bu klasörlerin çoğu **üretilmiş** (generated) içerik barındırır — kay
 | `.claude/CLAUDE.md` | Elle yazılır | Claude Code'un otomatik okuduğu kök talimat — proje özeti + `.agents/` mimarisine yönlendirme. |
 | `.claude/settings.json` | Elle yazılır | İzin ayarları (`allowCommands`, `denyPaths`). |
 | `.claude/rules/*.md` (16 dosya) | ⚙️ **Üretilmiş** | `.agents/rules/`'ın birebir kopyası — Claude Code'un native olarak buradan okuduğu format. |
+| `.claude/skills/<skill-adı>` | ⚙️ **Üretilmiş link** | `.agents/skills/<skill-adı>`'a işaret eden junction (Windows) / symlink. Claude Code skill'leri **sadece** `.claude/skills/` altında keşfeder; `.agents/skills/` onun keşif konumlarından biri değil. İçerik değil, link — `.gitignore`'da, commit'lenmez, klonlandıktan sonra generator yeniden üretir. |
 | `.claude/commands/review.md` | ⚙️ **Üretilmiş** | `.agents/commands/review.md`'nin kopyası — `/review` komutu. |
 | `.claude/commands/<skill-adı>.md` (28 dosya) | ⚙️ **Üretilmiş** | Her `.agents/skills/*` klasörü için otomatik üretilen ince komut sarmalayıcısı (ör. `/rad-prompt-studio`) — skill'i doğal-dil eşleşmesine güvenmeden, deterministik şekilde ilk adımından başlatır. Sadece Claude Code'da var (Cursor'da henüz komut klasörü yok). |
 | `.cursor/rules/*.md` (16 dosya) | ⚙️ **Üretilmiş** | `.agents/rules/`'ın Cursor formatındaki kopyası. |
@@ -144,6 +147,8 @@ Bu klasörlerin çoğu **üretilmiş** (generated) içerik barındırır — kay
 | Dosya | Ne işe yarar |
 |---|---|
 | `register.bat` | Bu kiti makine-geneli `.rad` registry'sine kaydeder — kendi kayıt mantığını taşımaz, sadece hub kökündeki symlink üzerinden workspace'in kendi `rad.ps1`'ini `-Action Register` ile çağırır. Hub kurulu değilse sadece "Hub kurulu değil." der, durur. `-Name` ile farklı ad, `-Unregister` ile kayıt silme. Kit taşınınca/yeniden klonlanınca tekrar çalıştırılmalı. |
+| `verify-kit.ps1` | Mekanik tutarlılık kapısı; CI'ın çalıştırdığı script'in aynısı, yerelde de `pwsh tools/verify-kit.ps1` ile çalışır. Kontroller: generator drift, `.cursor/rules` altındaki her dosya `.mdc` mi, `.claude/skills/` her skill için giriş taşıyor mu, her `SKILL.md`'nin frontmatter'ı geçerli mi, kalan `[FILL IN` var mı, README'nin gömdüğü görseller diskte var mı, `LICENSE` duruyor mu. |
+| `.github/workflows/verify.yml` | CI: her push ve PR'da kit doğrulama script'ini çalıştırır (ubuntu-latest, ön-yüklü PowerShell 7). Kontrollerin kendisi script'te, burada değil — tek uygulama, iki çağıran. |
 | `generate-ai-configs.ps1` | `.agents/rules` ve `.agents/commands`'ı okuyup `.claude/rules`, `.cursor/rules`, `.claude/commands`'a kopyalayan PowerShell script. Ayrıca `.agents/skills/*` altındaki her klasör için `.claude/commands/<skill-adı>.md` adında ince bir komut sarmalayıcısı üretir (skill'i `/<skill-adı>` ile doğrudan, adım sırasını bozmadan çağırabilmek için) — isim bir hand-authored komutla çakışırsa o skill için üretim atlanır ve uyarı basılır. `.agents/rules`, `.agents/commands` altında bir dosya eklenip/silinip/değiştirildiğinde VEYA `.agents/skills` altına bir skill eklenip/kaldırıldığında çalıştırılması **zorunludur** (bkz. `sync-workflow.md`). |
 
 ## `docs/`
