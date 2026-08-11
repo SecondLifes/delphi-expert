@@ -1,5 +1,5 @@
 ---
-name: "Firebird Database"
+name: firebird-database
 description: "Development patterns with Firebird database via FireDAC — connection, PSQL, generators, transactions, migrations"
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: Intraweb Framework
+name: intraweb-framework
 description: Guides and standards for using the Intraweb stateful web framework in Delphi projects.
 ---
 

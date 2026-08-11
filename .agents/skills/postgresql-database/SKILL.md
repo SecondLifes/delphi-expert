@@ -1,5 +1,5 @@
 ---
-name: "PostgreSQL Database"
+name: postgresql-database
 description: "Development patterns with PostgreSQL via FireDAC — connection, PL/pgSQL, sequences, JSONB, UPSERT, full-text search, migrations"
 ---
 

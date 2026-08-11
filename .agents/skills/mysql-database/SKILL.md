@@ -1,5 +1,5 @@
 ---
-name: "MySQL Database"
+name: mysql-database
 description: "Development patterns with MySQL/MariaDB via FireDAC — connection, stored procedures, AUTO_INCREMENT, JSON, triggers, replication, migrations"
 ---
 

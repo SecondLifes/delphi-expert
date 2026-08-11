@@ -1,5 +1,5 @@
 ---
-name: Dext Framework Patterns
+name: dext-framework
 description: Architectural patterns, Entity ORM, Minimal APIs and dependency injection for projects created with Dext Framework (cesarliws/dext).
 ---
 

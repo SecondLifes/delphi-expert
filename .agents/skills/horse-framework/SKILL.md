@@ -1,5 +1,5 @@
 ---
-name: "Horse Framework"
+name: horse-framework
 description: "Patterns for developing REST APIs with Horse framework in Delphi"
 ---
 
