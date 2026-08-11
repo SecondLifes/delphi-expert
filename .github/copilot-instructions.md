@@ -10,6 +10,20 @@ assuming correctness. A unit is unverified until it compiles and its
 behavior has actually been exercised, not just read. Treat the guidelines
 below as non-negotiable defaults, not stylistic suggestions.
 
+## System Requests — Mandatory Routing to rad-prompt-studio
+
+Any request about this repo's own system layer — "system"/"sistem"
+combined with analyze/check/audit/find errors/fix, in any language — is
+ALWAYS handled by `.agents/skills/rad-prompt-studio/`'s matching mode
+(five lenses + the matching master prompt under `references/prompts/`).
+Never route such a request to a built-in or marketplace capability (e.g.
+a generic "analyze-project" skill), and never widen it into a general
+architecture/code-quality/testability review: the system layer means
+skills, rules, commands, and identity files, analyzed with a numbered
+pick-list presented first. Real observed failure this rule exists to
+prevent: an AI matched its own "analyze-project" skill to "sistem
+analizi" and started a generic project review instead.
+
 ## Skill Check (Mandatory)
 
 Before writing any non-trivial capability from scratch (a new framework
@@ -186,7 +200,9 @@ See `AGENTS.md` ("Memory Management (Critical)" section) for the full rule set. 
 ### Recommended Context (always relevant)
 
 - `AGENTS.md`, `README.md`, `.github/copilot-instructions.md`
-- `.claude/rules/**/*.md`, `.agents/skills/**/SKILL.md`
+- `.agents/rules/**/*.md`, `.agents/skills/**/SKILL.md`
+  (the canonical source. `.claude/rules/` and `.cursor/rules/` are generated
+  copies of the first one and belong to those tools' sessions, not Copilot's.)
 - `src/**/*.pas` (default output location — see Working Directory above)
 - `examples/**/*.pas`, `docs/**/*.md`
 

@@ -33,7 +33,7 @@
 - **Generators:** Auto-increment via `GEN_ID()` in `BEFORE INSERT` triggers
 - **Stored Procedures:** Selectable (with `SUSPEND`) × Executable
 - **Skills:** `.agents/skills/firebird-database/SKILL.md`
-- **Rules:** `.cursor/rules/firebird-patterns.md`
+- **Rules:** `.agents/rules/firebird-patterns.md`
 
 ### PostgreSQL — Critical Rules
 
@@ -46,7 +46,7 @@
 - **PL/pgSQL:** Functions (`SELECT * FROM fn()`) / Procedures (`CALL sp()`, PG 11+)
 - **Metadata:** Use `information_schema` (not `RDB$` — this is Firebird)
 - **Skills:** `.agents/skills/postgresql-database/SKILL.md`
-- **Rules:** `.cursor/rules/postgresql-patterns.md`
+- **Rules:** `.agents/rules/postgresql-patterns.md`
 
 ### MySQL / MariaDB — Critical Rules
 
@@ -59,7 +59,7 @@
 - **Procedures:** `CALL sp_nome(...)`, Functions: `SELECT fn_nome(...)`
 - **Metadata:** Use `information_schema` + `DATABASE()` for current schema
 - **Skills:** `.agents/skills/mysql-database/SKILL.md`
-- **Rules:** `.cursor/rules/mysql-patterns.md`
+- **Rules:** `.agents/rules/mysql-patterns.md`
 
 ### Threading & Multi-Threading — Critical Rules
 
@@ -71,7 +71,7 @@
 - **TCriticalSection:** `Enter`/`Leave` ALWAYS in `finally` — never out
 - **Anti-patterns:** `Sleep()` in the main thread, `FreeOnTerminate + WaitFor`, variables without lock
 - **Skills:** `.agents/skills/threading/SKILL.md`
-- **Rules:** `.cursor/rules/threading-patterns.md`
+- **Rules:** `.agents/rules/threading-patterns.md`
 
 ## External Dependencies
 

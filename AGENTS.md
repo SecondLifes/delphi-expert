@@ -325,7 +325,7 @@ FConnection.TxOptions.Isolation := xiReadCommitted;       //Standard isolation
 - ❌ `CREATE TABLE IF NOT EXISTS` — does not exist in Firebird (check via `RDB$RELATIONS`)
 
 > **Skills:** `.agents/skills/firebird-database/SKILL.md`
-> **Rules:** `.cursor/rules/firebird-patterns.md`
+> **Rules:** `.agents/rules/firebird-patterns.md`
 
 ## PostgreSQL Database
 
@@ -367,7 +367,7 @@ FConnection.TxOptions.Isolation := xiReadCommitted;
 - ❌ Ignore indexes on WHERE/JOIN columns
 
 > **Skills:** `.agents/skills/postgresql-database/SKILL.md`
-> **Rules:** `.cursor/rules/postgresql-patterns.md`
+> **Rules:** `.agents/rules/postgresql-patterns.md`
 
 ## MySQL / MariaDB Database
 
@@ -409,7 +409,7 @@ FConnection.TxOptions.Isolation := xiReadCommitted;
 - ❌ Ignore indexes on WHERE/JOIN columns
 
 > **Skills:** `.agents/skills/mysql-database/SKILL.md`
-> **Rules:** `.cursor/rules/mysql-patterns.md`
+> **Rules:** `.agents/rules/mysql-patterns.md`
 
 ## Threads and Multi-Threading
 
@@ -449,7 +449,7 @@ Threads are essential for keeping the UI responsive and processing data in paral
 - ❌ `TCriticalSection.Leave` fora de `finally`
 
 > **Skills:** `.agents/skills/threading/SKILL.md`
-> **Rules:** `.cursor/rules/threading-patterns.md`
+> **Rules:** `.agents/rules/threading-patterns.md`
 
 ## SOLID principles in Delphi
 

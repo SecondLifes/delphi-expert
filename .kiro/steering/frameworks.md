@@ -11,7 +11,7 @@ This spec-kit supports three popular frameworks from the Delphi ecosystem. The c
 - **Features:** Middleware chain, low coupling, quick to configure
 - **Installation:** `boss install horse`
 - **Skills:** `.agents/skills/horse-framework/SKILL.md`
-- **Rules:** `.cursor/rules/horse-patterns.md`
+- **Rules:** `.agents/rules/horse-patterns.md`
 
 ### DelphiMVCFramework (Full-Featured API)
 
@@ -20,7 +20,7 @@ This spec-kit supports three popular frameworks from the Delphi ecosystem. The c
 - **Features:** Active Record, RQL, built-in JWT, automatic serialization, Swagger
 - **Installation:** Repository clone + search paths
 - **Skills:** `.agents/skills/dmvcframework/SKILL.md` plus the focused companions `dmvcframework-minimal-api`, `-webapp`, `-ui`, `-security`, `-testing`; `htmx-skill` for the hypermedia front end
-- **Rules:** `.cursor/rules/dmvc-patterns.md`
+- **Rules:** `.agents/rules/dmvc-patterns.md`
 
 ### Dext Framework (Minimal APIs & ORM)
 
@@ -29,7 +29,7 @@ This spec-kit supports three popular frameworks from the Delphi ecosystem. The c
 - **Features:** Fluent Routing, Smart Properties, Dext.Entity, TAsyncTask
 - **Links:** https://github.com/cesarliws/dext
 - **Skills:** `.agents/skills/dext-framework/SKILL.md`
-- **Rules:** `.cursor/rules/dext-patterns.md`
+- **Rules:** `.agents/rules/dext-patterns.md`
 
 ### DevExpress Components
 
@@ -45,7 +45,7 @@ This spec-kit supports three popular frameworks from the Delphi ecosystem. The c
 - **When to use:** Issuing tax documents (NF-e, NFC-e, CT-e, SAT), TEF, Bills and access to non-fiscal hardware.
 - **Architecture:** Do not throw visual components directly into forms. Create Services/Adapters (`INFeService`) that inject and isolate the `TACBrNFe` component.
 - **Rules:** `.agents/rules/acbr-patterns.md` (former acbr-components skill merged here)
-- **Rules:** `.cursor/rules/acbr-patterns.md`
+- **Rules:** `.agents/rules/acbr-patterns.md`
 
 ### Intraweb Framework
 
@@ -53,7 +53,7 @@ This spec-kit supports three popular frameworks from the Delphi ecosystem. The c
 - **Style:** Component-based, Stateful, RAD, Server-side rendered (AJAX/Postbacks).
 - **Attention:** Avoid using global data (such as instances in `var` in `interface`), as they leak cross-session state. Target transient state always on `UserSession` instances.
 - **Skills:** `.agents/skills/intraweb-framework/SKILL.md`
-- **Rules:** `.cursor/rules/intraweb-patterns.md`
+- **Rules:** `.agents/rules/intraweb-patterns.md`
 
 ### Firebird Database
 
@@ -62,7 +62,7 @@ This spec-kit supports three popular frameworks from the Delphi ecosystem. The c
 - **Features:** Generators/Sequences, Stored Procedures (Selectable/Executable), Domains, Triggers, Events, Packages (FB3+), IDENTITY columns (FB3+), native BOOLEAN (FB3+).
 - **Critical rules:** Dialect 3 ALWAYS, CharacterSet UTF8, PageSize 16384, `RETURNING` with `Open` (not `ExecSQL`).
 - **Skills:** `.agents/skills/firebird-database/SKILL.md`
-- **Rules:** `.cursor/rules/firebird-patterns.md`
+- **Rules:** `.agents/rules/firebird-patterns.md`
 
 ### PostgreSQL Database
 
@@ -71,7 +71,7 @@ This spec-kit supports three popular frameworks from the Delphi ecosystem. The c
 - **Features:** IDENTITY (SQL Standard), UPSERT (`ON CONFLICT`), indexable JSONB, Full-Text Search (`tsvector`), recursive CTEs, Window Functions, ENUM types, Schemas, Partitioning, LISTEN/NOTIFY, extensions (`pgcrypto`, `pg_trgm`).
 - **Critical rules:** `IDENTITY` instead of `SERIAL`, CharacterSet UTF8, `RETURNING` with `Open`, metadata via `information_schema`.
 - **Skills:** `.agents/skills/postgresql-database/SKILL.md`
-- **Rules:** `.cursor/rules/postgresql-patterns.md`
+- **Rules:** `.agents/rules/postgresql-patterns.md`
 
 ### MySQL / MariaDB Database
 
@@ -80,7 +80,7 @@ This spec-kit supports three popular frameworks from the Delphi ecosystem. The c
 - **Features:** AUTO_INCREMENT, `LAST_INSERT_ID()`, UPSERT (`ON DUPLICATE KEY UPDATE`), native JSON (5.7+), FULLTEXT Search, native ENUM/SET, Generated Columns, CTEs and Window Functions (8.0+), Partitioning.
 - **Critical rules:** `utf8mb4` ALWAYS (never `utf8`), `InnoDB` ALWAYS, without `RETURNING` (use `LAST_INSERT_ID()`), metadata via `information_schema`.
 - **Skills:** `.agents/skills/mysql-database/SKILL.md`
-- **Rules:** `.cursor/rules/mysql-patterns.md`
+- **Rules:** `.agents/rules/mysql-patterns.md`
 
 ### Threading & Multi-Threading
 
@@ -89,7 +89,7 @@ This spec-kit supports three popular frameworks from the Delphi ecosystem. The c
 - **Rule of Thumb:** NEVER access VCL/FMX from secondary thread → `TThread.Synchronize` (blocking) or `TThread.Queue` (non-blocking).
 - **Thread-Safety:** `TCriticalSection`, `TMonitor`, `TInterlocked`, `TThreadList<T>`, `TMultiReadExclusiveWriteSynchronizer`, `TThreadedQueue<T>`.
 - **Skills:** `.agents/skills/threading/SKILL.md`
-- **Rules:** `.cursor/rules/threading-patterns.md`
+- **Rules:** `.agents/rules/threading-patterns.md`
 
 ## Framework Decision
 
